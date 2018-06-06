@@ -1,0 +1,937 @@
+2018-05-23 16:00:14 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:00:19 [GET] [/setup/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.setupTable(360): microbe.model.Article
+2018-05-23 16:00:57 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:03:01 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:03:05 [GET] [/setup/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.setupTable(360): microbe
+	[Log] microbe.apis.MicrobialApi.setupTable(368): {content => { comp => TextInput, name => content }, model => { name => Article }, titre => { comp => TextInput, name => titre }, src => { comp => UpApiComp, name => illustration }}
+2018-05-23 16:05:05 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:05:11 [GET] [/setup/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.setupTable(360): microbe.model.Article
+	[Log] microbe.apis.MicrobialApi.setupTable(368): {content => { comp => TextInput, name => content }, model => { name => Article }, titre => { comp => TextInput, name => titre }, src => { comp => UpApiComp, name => illustration }}
+2018-05-23 16:05:40 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:05:45 [GET] [/setup/microbe.model.Article] from [127.0.0.1 The Boss], response: [500 text/html]
+	[Log] microbe.apis.MicrobialApi.setupTable(360): microbe.model.Article
+	[Log] microbe.apis.MicrobialApi.setupTable(368): {content => { comp => TextInput, name => content }, model => { name => Article }, titre => { comp => TextInput, name => titre }, src => { comp => UpApiComp, name => illustration }}
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#500: Uncaught error while executing microbe.control.MicrobeController.setup() @ microbe.control.MicrobeController.execute:15 (Invalid call) \nCalled from tink.core._Future.Future_Impl_::flatten line 56\nCalled from tink.core.FutureTrigger::new line 153\nCalled from tink.core._Future.Future_Impl_::gather line 23\nCalled from tink.core._Future.Future_Impl_::flatten line 55\nCalled from tink.core._Future.Future_Impl_::gather line 20\nCalled from tink.core._Future.Future_Impl_::gather line 20\nCalled from tink.core._Future.Future_Impl_::gather line 20\nCalled from ufront.web.Controller::setContextActionResultWhenFinished line 315\nCalled from microbe.control.MicrobeController::execute line 111
+2018-05-23 16:07:00 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:07:09 [GET] [/setup/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.setupTable(360): microbe.model.Article
+	[Log] microbe.apis.MicrobialApi.setupTable(368): {content => { comp => TextInput, name => content }, model => { name => Article }, titre => { comp => TextInput, name => titre }, src => { comp => UpApiComp, name => illustration }}
+2018-05-23 16:10:01 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:11:43 [GET] [/mods/list/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:11:44 [GET] [/mods/list/js/client.js] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:15 \nCalled from microbe.control.MicrobeController::execute line 15
+2018-05-23 16:11:49 [GET] [/affiche/Article/mod/1] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(338): modClass=Article
+2018-05-23 16:14:29 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:15:10 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:15:17 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:15:29 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:15:47 [GET] [/mods/plus/null] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(338): modClass=null
+2018-05-23 16:19:09 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:19:15 [GET] [/mods/plus/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(338): modClass=microbe.model.Article
+2018-05-23 16:21:34 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:21:40 [GET] [/mods/plus/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(338): modClass=microbe.model.Article
+2018-05-23 16:21:46 [POST] [/] from [127.0.0.1 The Boss], response: [500 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(338): modClass=microbe.model.Article
+	[Error] ufront.remoting.RemotingHandler.remotingError(209): Invalid field access : keys
+2018-05-23 16:25:58 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:26:02 [GET] [/mods/plus/null] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(338): modClass=null
+2018-05-23 16:27:50 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:27:51 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:28:06 [GET] [/mods/plus/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(338): modClass=microbe.model.Article
+2018-05-23 16:28:06 [GET] [/mods/plus/js/client.js] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:15 \nCalled from microbe.control.MicrobeController::execute line 15
+2018-05-23 16:28:49 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:28:55 [GET] [/mods/plus/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(338): modClass=microbe.model.Article
+2018-05-23 16:30:59 [GET] [/mods/plus/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(338): modClass=microbe.model.Article
+2018-05-23 16:31:00 [GET] [/assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:15 \nCalled from microbe.control.MicrobeController::execute line 15
+2018-05-23 16:31:33 [POST] [/] from [127.0.0.1 The Boss], response: [500 application/x-haxe-remoting]
+	[Error] ufront.remoting.RemotingHandler.remotingError(209): $nargs
+2018-05-23 16:34:09 [GET] [/] from [127.0.0.1 The Boss], response: [500 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#500: Unable to execute view template: Macro call microbeFarm(#function:1,) failed ($nargs) @ ufront.web.result.ViewResult.executeTemplate:693 (Macro call microbeFarm(#function:1,) failed ($nargs)) \nCalled from Reflect::callMethod line 52\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::renderResult line 513
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from Reflect::callMethod line 52\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+2018-05-23 16:34:46 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:36:04 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:36:10 [GET] [/mods/plus/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(338): modClass=microbe.model.Article
+2018-05-23 16:36:29 [GET] [/mods/plus/null] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(338): modClass=null
+2018-05-23 16:36:39 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:36:52 [GET] [/mods/plus/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(338): modClass=microbe.model.Article
+2018-05-23 16:37:13 [GET] [/mods/plus/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(338): modClass=microbe.model.Article
+2018-05-23 16:37:13 [GET] [/assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:15 \nCalled from microbe.control.MicrobeController::execute line 15
+2018-05-23 16:37:25 [POST] [/] from [127.0.0.1 The Boss], response: [500 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.recFormule(92): {content => { comp => TextInput, data => one, name => content }, model => { name => Article }, titre => { comp => TextInput, data => two, name => titre }, src => { comp => UpApiComp, data => /assets/turn.png, name => illustration }}
+	[Error] ufront.remoting.RemotingHandler.remotingError(209): $nargs
+2018-05-23 16:42:24 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:42:57 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:43:54 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 16:46:07 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 17:32:18 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 22:53:14 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 23:57:25 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-23 23:57:31 [GET] [/mods/plus/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(338): modClass=microbe.model.Article
+2018-05-23 23:57:31 [GET] [/assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:15 \nCalled from microbe.control.MicrobeController::execute line 15
+2018-05-23 23:57:55 [POST] [/] from [127.0.0.1 The Boss], response: [500 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.recFormule(92): {content => { comp => TextInput, data => tik, name => content }, model => { name => Article }, titre => { comp => TextInput, data => tak, name => titre }, src => { comp => UpApiComp, data => /assets/turn.png, name => illustration }}
+	[Error] ufront.remoting.RemotingHandler.remotingError(209): $nargs
+2018-05-24 00:01:22 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:01:30 [GET] [/mods/plus/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(338): modClass=microbe.model.Article
+2018-05-24 00:01:31 [GET] [/assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:15 \nCalled from microbe.control.MicrobeController::execute line 15
+2018-05-24 00:01:44 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.recFormule(92): {content => { comp => TextInput, data => tik, name => content }, model => { name => microbe.model.Article }, titre => { comp => TextInput, data => tak, name => titre }, src => { comp => UpApiComp, data => /assets/turn.png, name => illustration }}
+	[Log] microbe.apis.MicrobialApi.recFormule(102): afterSpodnull
+	[Log] microbe.apis.MicrobialApi.recFormule(111): tik
+	[Log] microbe.apis.MicrobialApi.recFormule(111): tak
+	[Log] microbe.apis.MicrobialApi.recFormule(111): /assets/turn.png
+	[Log] microbe.apis.MicrobialApi.recFormule(159): validate
+	[Log] microbe.apis.MicrobialApi.recFormule(163): before Save
+	[Log] microbe.apis.MicrobialApi.recFormule(165): after Save
+	[Log] microbe.apis.MicrobialApi.recFormule(175): before Success
+2018-05-24 00:12:53 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:12:59 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+2018-05-24 00:13:05 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(347): modClass=microbe.model.Article
+2018-05-24 00:13:05 [GET] [/assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:15 \nCalled from microbe.control.MicrobeController::execute line 15
+2018-05-24 00:16:23 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:16:30 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+2018-05-24 00:16:33 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(189): getDataFormule
+2018-05-24 00:16:33 [GET] [/ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:15 \nCalled from microbe.control.MicrobeController::execute line 15
+2018-05-24 00:16:54 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.recFormule(101): {content => { comp => TextInput, data => tiki, name => content }, model => { data => null, name => microbe.model.Article, id => 1 }, titre => { comp => TextInput, data => tak, name => titre }, src => { comp => UpApiComp, data => /ups//assets/turn.png, name => illustration }}
+	[Log] microbe.apis.MicrobialApi.recFormule(111): afterSpod1
+	[Log] microbe.apis.MicrobialApi.recFormule(120): tiki
+	[Log] microbe.apis.MicrobialApi.recFormule(120): tak
+	[Log] microbe.apis.MicrobialApi.recFormule(120): /ups//assets/turn.png
+	[Log] microbe.apis.MicrobialApi.recFormule(168): validate
+	[Log] microbe.apis.MicrobialApi.recFormule(172): before Save
+	[Log] microbe.apis.MicrobialApi.recFormule(174): after Save
+	[Log] microbe.apis.MicrobialApi.recFormule(184): before Success
+2018-05-24 00:24:56 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:24:57 [GET] [/css/lessie.css] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 00:25:13 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:25:13 [GET] [/js/css/lessie.css] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 00:25:40 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:25:56 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+2018-05-24 00:26:26 [GET] [/mods/list/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:26:36 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(189): getDataFormule
+2018-05-24 00:26:37 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 00:28:00 [GET] [/affiche/microbe.model.Article/mod/1] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(189): getDataFormule
+2018-05-24 00:28:00 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 00:28:06 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+2018-05-24 00:28:09 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(189): getDataFormule
+2018-05-24 00:28:09 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 00:30:48 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:30:52 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+2018-05-24 00:30:55 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(189): getDataFormule
+2018-05-24 00:30:56 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 00:31:00 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+2018-05-24 00:31:10 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:31:10 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:33:16 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:33:20 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+2018-05-24 00:33:22 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(189): getDataFormule
+2018-05-24 00:33:22 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 00:34:01 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:34:05 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+2018-05-24 00:34:07 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(189): getDataFormule
+2018-05-24 00:34:07 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 00:34:15 [GET] [/affiche/microbe.model.Article/mod/1] from [127.0.0.1 The Boss], response: [500 text/html]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(189): getDataFormule
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#500: Unable to execute view template: Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693) @ ufront.web.result.ViewResult.executeTemplate:693 (Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693)) \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::renderResult line 513
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+2018-05-24 00:42:56 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:43:01 [POST] [/] from [127.0.0.1 The Boss], response: [500 application/x-haxe-remoting]
+	[Error] ufront.remoting.RemotingHandler.remotingError(209): Error while executing SELECT * FROM FakeVo (Sqlite error in SELECT * FROM FakeVo : no such table: FakeVo)
+2018-05-24 00:45:52 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:45:59 [POST] [/] from [127.0.0.1 The Boss], response: [500 application/x-haxe-remoting]
+	[Error] ufront.remoting.RemotingHandler.remotingError(209): Error while executing SELECT * FROM FakeVo (Sqlite error in SELECT * FROM FakeVo : no such table: FakeVo)
+2018-05-24 00:47:27 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:47:34 [POST] [/] from [127.0.0.1 The Boss], response: [500 application/x-haxe-remoting]
+	[Error] ufront.remoting.RemotingHandler.remotingError(209): Error while executing SELECT * FROM FakeVo (Sqlite error in SELECT * FROM FakeVo : no such table: FakeVo)
+2018-05-24 00:49:15 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:49:22 [POST] [/] from [127.0.0.1 The Boss], response: [500 application/x-haxe-remoting]
+	[Error] ufront.remoting.RemotingHandler.remotingError(209): Error while executing SELECT * FROM FakeVo (Sqlite error in SELECT * FROM FakeVo : no such table: FakeVo)
+2018-05-24 00:50:21 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:50:28 [POST] [/] from [127.0.0.1 The Boss], response: [500 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(71): all mods
+	[Error] ufront.remoting.RemotingHandler.remotingError(209): Error while executing SELECT * FROM FakeVo (Sqlite error in SELECT * FROM FakeVo : no such table: FakeVo)
+2018-05-24 00:58:35 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:58:42 [POST] [/] from [127.0.0.1 The Boss], response: [500 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all mods
+	[Error] ufront.remoting.RemotingHandler.remotingError(209): Error while executing SELECT * FROM FakeVo (Sqlite error in SELECT * FROM FakeVo : no such table: FakeVo)
+2018-05-24 00:59:51 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 00:59:58 [POST] [/] from [127.0.0.1 The Boss], response: [500 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all mods
+	[Error] ufront.remoting.RemotingHandler.remotingError(209): Error while executing SELECT * FROM FakeVo (Sqlite error in SELECT * FROM FakeVo : no such table: FakeVo)
+2018-05-24 01:00:19 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:00:26 [POST] [/] from [127.0.0.1 The Boss], response: [500 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+	[Error] ufront.remoting.RemotingHandler.remotingError(209): Error while executing SELECT * FROM FakeVo (Sqlite error in SELECT * FROM FakeVo : no such table: FakeVo)
+2018-05-24 01:01:09 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:01:16 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:02:28 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:04:24 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:04:32 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:07:56 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:08:16 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:08:21 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:08:26 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:08:31 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:09:53 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:09:56 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:09:58 [GET] [/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [500 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#500: Unable to execute view template: Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693) @ ufront.web.result.ViewResult.executeTemplate:693 (Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693)) \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::renderResult line 513
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+2018-05-24 01:11:04 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:11:08 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:11:10 [GET] [/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [500 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#500: Unable to execute view template: Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693) @ ufront.web.result.ViewResult.executeTemplate:693 (Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693)) \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::renderResult line 513
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+2018-05-24 01:13:22 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:13:24 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:13:27 [GET] [/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [500 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#500: Unable to execute view template: Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693) @ ufront.web.result.ViewResult.executeTemplate:693 (Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693)) \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::renderResult line 513
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+2018-05-24 01:13:40 [GET] [/mods/list/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+	[Log] microbe.control.MicrobeController.mods(71): naaaa
+2018-05-24 01:14:14 [GET] [/setup/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.setupTable(377): microbe.vo.FakeVo
+	[Log] microbe.apis.MicrobialApi.setupTable(385): {text => { comp => TextInput, name => description }, model => { name => microbe.vo.FakeVo }, titre => { comp => TextInput, name => titre }}
+2018-05-24 01:14:17 [GET] [/mods/list/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:14:19 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:14:22 [GET] [/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [500 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#500: Unable to execute view template: Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693) @ ufront.web.result.ViewResult.executeTemplate:693 (Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693)) \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::renderResult line 513
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+2018-05-24 01:14:25 [GET] [/mods/list/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:14:35 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:14:35 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:14:37 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:14:39 [GET] [/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [500 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#500: Unable to execute view template: Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693) @ ufront.web.result.ViewResult.executeTemplate:693 (Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693)) \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::renderResult line 513
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+2018-05-24 01:14:42 [GET] [/mods/list/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:14:44 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:14:48 [GET] [/mods/plus/microbe.model.Article] from [127.0.0.1 The Boss], response: [500 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.model.Article
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#500: Unable to execute view template: Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693) @ ufront.web.result.ViewResult.executeTemplate:693 (Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693)) \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::renderResult line 513
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+2018-05-24 01:14:50 [GET] [/mods/list/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:14:54 [GET] [/mods/plus/microbe.model.Article] from [127.0.0.1 The Boss], response: [500 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.model.Article
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#500: Unable to execute view template: Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693) @ ufront.web.result.ViewResult.executeTemplate:693 (Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693)) \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::renderResult line 513
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+2018-05-24 01:15:44 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:15:49 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:15:51 [GET] [/mods/plus/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.model.Article
+2018-05-24 01:15:51 [GET] [/assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:15:55 [GET] [/mods/list/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:15:57 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:15:59 [GET] [/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+2018-05-24 01:16:10 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.recFormule(108): {text => { comp => TextInput, data => banji, name => description }, model => { name => microbe.vo.FakeVo }, titre => { comp => TextInput, data => banjo, name => titre }}
+	[Log] microbe.apis.MicrobialApi.recFormule(118): afterSpodnull
+	[Log] microbe.apis.MicrobialApi.recFormule(127): banji
+	[Log] microbe.apis.MicrobialApi.recFormule(127): banjo
+	[Log] microbe.apis.MicrobialApi.recFormule(175): validate
+	[Log] microbe.apis.MicrobialApi.recFormule(179): before Save
+	[Log] microbe.apis.MicrobialApi.recFormule(181): after Save
+	[Log] microbe.apis.MicrobialApi.recFormule(191): before Success
+2018-05-24 01:16:15 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:16:18 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:17:08 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:17:11 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:17:13 [GET] [/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+2018-05-24 01:17:16 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:17:19 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:17:19 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:17:21 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:17:28 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:17:30 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:17:32 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:17:35 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:17:35 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:21:23 [GET] [/affiche/microbe.model.Article/mod/1] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:21:23 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:21:26 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:21:29 [GET] [/mods/list/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:21:33 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:21:33 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:21:35 [GET] [/affiche/microbe.model.Article/mod/1] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:21:36 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:21:39 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:21:42 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:21:44 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:21:45 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:28:52 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:28:56 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:28:58 [GET] [/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+2018-05-24 01:29:10 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.recFormule(108): {text => { comp => TextInput, data => thanos, name => description }, model => { name => microbe.vo.FakeVo }, titre => { comp => TextInput, data => avenger, name => titre }}
+	[Log] microbe.apis.MicrobialApi.recFormule(118): afterSpodnull
+	[Log] microbe.apis.MicrobialApi.recFormule(127): thanos
+	[Log] microbe.apis.MicrobialApi.recFormule(127): avenger
+	[Log] microbe.apis.MicrobialApi.recFormule(175): validate
+	[Log] microbe.apis.MicrobialApi.recFormule(179): before Save
+	[Log] microbe.apis.MicrobialApi.recFormule(181): after Save
+	[Log] microbe.apis.MicrobialApi.recFormule(191): before Success
+2018-05-24 01:29:13 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:30:18 [GET] [/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+2018-05-24 01:35:42 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:35:45 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:35:48 [GET] [/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:36:28 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:36:31 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:36:33 [GET] [/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:36:36 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:36:39 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:36:41 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:36:43 [GET] [/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:37:20 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:37:24 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:37:27 [GET] [/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:37:59 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:38:02 [GET] [/mods/plus/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.model.Article
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:38:02 [GET] [/assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:38:04 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:38:06 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:38:06 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:38:08 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:38:10 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:38:12 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:38:25 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:38:29 [GET] [/mods/plus/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.model.Article
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:38:30 [GET] [/assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:38:33 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:38:43 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:38:48 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:38:51 [GET] [/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:43:26 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:43:36 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:43:40 [GET] [/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+	[Trace] microbe.control.MicrobeController.insert(98): erto=[]
+2018-05-24 01:44:18 [GET] [/mods/list/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:44:26 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:44:28 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.model.Article
+2018-05-24 01:44:28 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:44:29 [GET] [/assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:45:32 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:45:34 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:45:37 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+2018-05-24 01:45:37 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:46:14 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:46:18 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:46:21 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+2018-05-24 01:46:25 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:46:27 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:46:27 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:46:31 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:46:33 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:46:36 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:46:37 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:46:38 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:46:50 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:48:11 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:48:15 [GET] [/mods/list/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:48:19 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+2018-05-24 01:48:29 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:48:31 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:48:35 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+2018-05-24 01:48:40 [POST] [/] from [127.0.0.1 The Boss], response: [500 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+	[Error] ufront.remoting.RemotingHandler.remotingError(209): Invalid field access : keys
+2018-05-24 01:50:59 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+2018-05-24 01:51:14 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:51:19 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:51:19 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:52:21 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:52:26 [POST] [/] from [127.0.0.1 The Boss], response: [500 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=null
+	[Error] ufront.remoting.RemotingHandler.remotingError(209): Invalid field access : keys
+2018-05-24 01:52:30 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:52:32 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:52:49 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:52:56 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:52:56 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:52:59 [POST] [/] from [127.0.0.1 The Boss], response: [500 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+	[Error] ufront.remoting.RemotingHandler.remotingError(209): Invalid field access : keys
+2018-05-24 01:53:04 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:53:04 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.MicrobeController.execute:16 \nCalled from microbe.control.MicrobeController::execute line 16
+2018-05-24 01:54:40 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:54:44 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:54:49 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+2018-05-24 01:54:54 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:54:58 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:55:00 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:55:01 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+2018-05-24 01:55:29 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:55:37 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:56:24 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:56:28 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:56:30 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:56:32 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 01:56:41 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.recFormule(108): {text => { comp => TextInput, data => banji, name => description }, model => { data => null, name => microbe.vo.FakeVo, id => 1 }, titre => { comp => TextInput, data => banja, name => titre }}
+	[Log] microbe.apis.MicrobialApi.recFormule(118): afterSpod1
+	[Log] microbe.apis.MicrobialApi.recFormule(127): banji
+	[Log] microbe.apis.MicrobialApi.recFormule(127): banja
+	[Log] microbe.apis.MicrobialApi.recFormule(175): validate
+	[Log] microbe.apis.MicrobialApi.recFormule(179): before Save
+	[Log] microbe.apis.MicrobialApi.recFormule(181): after Save
+	[Log] microbe.apis.MicrobialApi.recFormule(191): before Success
+2018-05-24 01:56:43 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+2018-05-24 01:56:54 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.recFormule(108): {text => { comp => TextInput, data => iron, name => description }, model => { name => microbe.vo.FakeVo }, titre => { comp => TextInput, data => man, name => titre }}
+	[Log] microbe.apis.MicrobialApi.recFormule(118): afterSpodnull
+	[Log] microbe.apis.MicrobialApi.recFormule(127): iron
+	[Log] microbe.apis.MicrobialApi.recFormule(127): man
+	[Log] microbe.apis.MicrobialApi.recFormule(175): validate
+	[Log] microbe.apis.MicrobialApi.recFormule(179): before Save
+	[Log] microbe.apis.MicrobialApi.recFormule(181): after Save
+	[Log] microbe.apis.MicrobialApi.recFormule(191): before Success
+2018-05-24 01:57:01 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:58:58 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 01:59:03 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 01:59:06 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 02:02:37 [GET] [/affiche/microbe.vo.FakeVo/mod/3] from [127.0.0.1 The Boss], response: [500 text/html]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#500: Unable to execute view template: Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693) @ ufront.web.result.ViewResult.executeTemplate:693 (Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:693)) \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::renderResult line 513
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+	[Trace] ufront.web.result.ViewResult.executeTemplate(691): \nCalled from haxe.Template::run line 385\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 679\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 410\nCalled from haxe.Template::run line 415\nCalled from haxe.Template::run line 375\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 686
+2018-05-24 02:02:48 [GET] [/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 02:03:38 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 02:03:40 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 02:03:42 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 02:03:44 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 02:12:46 [GET] [/] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-24 02:12:56 [GET] [/] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-24 02:12:58 [GET] [/mods/list/microbe.model.Article] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-24 02:13:04 [GET] [/microbe/] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 02:14:25 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+2018-05-24 02:14:25 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 02:19:49 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 09:02:38 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yo
+2018-05-24 09:02:38 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:23:13 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yo
+2018-05-24 10:23:13 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:23:16 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 10:23:18 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 10:23:18 [GET] [/ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-24 10:23:29 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.recFormule(108): {content => { comp => TextInput, data => tiki, name => content }, model => { data => null, name => microbe.model.Article, id => 1 }, titre => { comp => TextInput, data => tok, name => titre }, src => { comp => UpApiComp, data => /ups//ups//assets/turn.png, name => illustration }}
+	[Log] microbe.apis.MicrobialApi.recFormule(118): afterSpod1
+	[Log] microbe.apis.MicrobialApi.recFormule(127): tiki
+	[Log] microbe.apis.MicrobialApi.recFormule(127): tok
+	[Log] microbe.apis.MicrobialApi.recFormule(127): /ups//ups//assets/turn.png
+	[Log] microbe.apis.MicrobialApi.recFormule(175): validate
+	[Log] microbe.apis.MicrobialApi.recFormule(179): before Save
+	[Log] microbe.apis.MicrobialApi.recFormule(181): after Save
+	[Log] microbe.apis.MicrobialApi.recFormule(191): before Success
+2018-05-24 10:23:32 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 10:23:34 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 10:23:36 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 10:23:36 [GET] [/ups//ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-24 10:24:55 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yo
+2018-05-24 10:24:55 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:25:00 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 10:25:02 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 10:25:02 [GET] [/ups//ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-24 10:25:07 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.recFormule(108): {content => { comp => TextInput, data => tiki, name => content }, model => { data => null, name => microbe.model.Article, id => 1 }, titre => { comp => TextInput, data => tuk, name => titre }, src => { comp => UpApiComp, data => /ups//ups//ups//assets/turn.png, name => illustration }}
+	[Log] microbe.apis.MicrobialApi.recFormule(118): afterSpod1
+	[Log] microbe.apis.MicrobialApi.recFormule(127): tiki
+	[Log] microbe.apis.MicrobialApi.recFormule(127): tuk
+	[Log] microbe.apis.MicrobialApi.recFormule(127): /ups//ups//ups//assets/turn.png
+	[Log] microbe.apis.MicrobialApi.recFormule(175): validate
+	[Log] microbe.apis.MicrobialApi.recFormule(179): before Save
+	[Log] microbe.apis.MicrobialApi.recFormule(181): after Save
+	[Log] microbe.apis.MicrobialApi.recFormule(191): before Success
+2018-05-24 10:25:10 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 10:25:11 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 10:26:09 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yo
+2018-05-24 10:26:09 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:26:19 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yo
+2018-05-24 10:26:19 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:26:27 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yo
+2018-05-24 10:26:27 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:26:52 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): ya
+2018-05-24 10:26:52 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:27:28 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): ya
+2018-05-24 10:27:28 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:30:07 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(13): yu
+2018-05-24 10:30:07 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:30:12 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-24 10:30:14 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-24 10:30:15 [GET] [/ups//ups//ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:8 \nCalled from microbe.control.HomeController::execute line 8
+2018-05-24 10:30:40 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(13): yu
+2018-05-24 10:30:40 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:39:14 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(13): yu
+2018-05-24 10:39:14 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:48:33 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(13): yu
+2018-05-24 10:48:34 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:48:54 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(13): yu
+2018-05-24 10:48:54 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:49:54 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(13): yu
+2018-05-24 10:49:54 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:54:46 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(13): yu
+2018-05-24 10:54:46 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:56:24 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(13): yu
+2018-05-24 10:56:24 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:57:41 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(13): yu
+2018-05-24 10:57:41 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 10:59:11 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(13): yu
+2018-05-24 10:59:11 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 11:07:08 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(13): yu
+2018-05-24 11:07:08 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 11:17:16 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(13): yu
+2018-05-24 11:17:16 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 11:18:41 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(13): yu
+2018-05-24 11:18:41 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 11:28:53 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-24 11:28:54 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 12:53:36 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-24 12:53:36 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-24 17:06:03 [GET] [/mods/list/microbe.model.Article] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-24 17:06:03 [GET] [/mods/list/microbe.model.Article] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-28 12:35:14 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 12:35:14 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 12:36:30 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 12:36:31 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 12:37:10 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 12:37:22 [GET] [/microbe/mods/list/microbe.model.Article] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-28 12:37:56 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 12:37:57 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 12:38:47 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 12:38:47 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 12:47:05 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 12:47:05 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 12:48:04 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 12:48:05 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 12:56:13 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 12:56:13 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 12:58:39 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 12:58:39 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 12:58:50 [GET] [/microbe/mods/list/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 12:58:54 [GET] [/microbe/affiche/microbe.vo.FakeVo/mod/1] from [127.0.0.1 The Boss], response: [500 text/html]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#500: Unable to execute view template: Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:694) @ ufront.web.result.ViewResult.executeTemplate:694 (Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:694)) \nCalled from haxe.Template::run line 379\nCalled from haxe.Template::run line 369\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 689\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 680\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 404\nCalled from haxe.Template::run line 409\nCalled from haxe.Template::run line 369\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 689\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::renderResult line 514
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+	[Trace] ufront.web.result.ViewResult.executeTemplate(692): \nCalled from haxe.Template::run line 379\nCalled from haxe.Template::run line 369\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 689
+	[Trace] ufront.web.result.ViewResult.executeTemplate(692): \nCalled from haxe.Template::run line 379\nCalled from haxe.Template::run line 369\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 689\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 680\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 404\nCalled from haxe.Template::run line 409\nCalled from haxe.Template::run line 369\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 689
+2018-05-28 12:59:03 [GET] [/microbe/mods/plus/microbe.vo.FakeVo] from [127.0.0.1 The Boss], response: [500 text/html]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#500: Unable to execute view template: Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:694) @ ufront.web.result.ViewResult.executeTemplate:694 (Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:694)) \nCalled from haxe.Template::run line 379\nCalled from haxe.Template::run line 369\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 689\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 680\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 404\nCalled from haxe.Template::run line 409\nCalled from haxe.Template::run line 369\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 689\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::renderResult line 514
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+	[Trace] ufront.web.result.ViewResult.executeTemplate(692): \nCalled from haxe.Template::run line 379\nCalled from haxe.Template::run line 369\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 689
+	[Trace] ufront.web.result.ViewResult.executeTemplate(692): \nCalled from haxe.Template::run line 379\nCalled from haxe.Template::run line 369\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 689\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 680\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 404\nCalled from haxe.Template::run line 409\nCalled from haxe.Template::run line 369\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 689
+2018-05-28 12:59:08 [GET] [/microbe/affiche/microbe.vo.FakeVo/mod/3] from [127.0.0.1 The Boss], response: [500 text/html]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#500: Unable to execute view template: Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:694) @ ufront.web.result.ViewResult.executeTemplate:694 (Macro call items(#function:1,) failed (Error#500: Unable to execute Partial[items] template: Cannot iter on null @ ufront.web.result.ViewResult.executeTemplate:694)) \nCalled from haxe.Template::run line 379\nCalled from haxe.Template::run line 369\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 689\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 680\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 404\nCalled from haxe.Template::run line 409\nCalled from haxe.Template::run line 369\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 689\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::renderResult line 514
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+	[Trace] ufront.web.result.ViewResult.executeTemplate(692): \nCalled from haxe.Template::run line 379\nCalled from haxe.Template::run line 369\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 689
+	[Trace] ufront.web.result.ViewResult.executeTemplate(692): \nCalled from haxe.Template::run line 379\nCalled from haxe.Template::run line 369\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 689\nCalled from tink.core.TypedError::throwSelf line 81\nCalled from tink.core.OutcomeTools::sure line 19\nCalled from ufront.web.result.ViewResult::addHelpersForPartials line 680\nCalled from a C function\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::call1 line 50\nCalled from ufront.view._TemplateHelper.TemplateHelper_Impl_::getFn line 38\nCalled from a C function\nCalled from haxe.Template::run line 404\nCalled from haxe.Template::run line 409\nCalled from haxe.Template::run line 369\nCalled from haxe.Template::execute line 110\nCalled from ufront.view.TemplatingEngines::get_haxe line 57\nCalled from ufront.web.result.ViewResult::executeTemplate line 689
+2018-05-28 13:01:56 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 13:01:56 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 13:02:25 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 13:02:25 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 13:03:16 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 13:03:16 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 13:04:28 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 13:04:28 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 13:05:21 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 13:05:21 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 13:06:19 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 13:06:20 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 13:07:21 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 13:07:21 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 13:08:40 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 13:08:40 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 13:09:18 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 13:09:18 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 13:09:37 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 13:09:37 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 13:10:38 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 13:10:39 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 13:10:42 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-28 13:10:44 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-28 13:10:46 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-28 13:10:49 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.vo.FakeVo
+2018-05-28 13:15:31 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 13:15:32 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 15:25:51 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 15:25:51 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 15:25:51 [GET] [/favicon.ico] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-28 15:25:52 [GET] [/apple-touch-icon-precomposed.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-28 15:25:52 [GET] [/apple-touch-icon.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-28 15:25:52 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 15:25:52 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] ufront.web.result.ViewResult.renderResult(490): hep
+2018-05-28 15:25:53 [GET] [/apple-touch-icon-precomposed.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-28 15:25:53 [GET] [/apple-touch-icon.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-28 15:47:39 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 15:47:39 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 15:47:42 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-28 15:47:44 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getFormuleFromString(354): modClass=microbe.model.Article
+2018-05-28 15:47:45 [GET] [/assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-28 15:47:47 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-28 15:47:47 [GET] [/ups//ups//ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-28 17:09:23 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 17:09:23 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 15:09:28 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 15:09:29 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 17:12:19 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 17:12:19 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 17:14:38 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 17:14:38 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 17:15:48 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 17:15:48 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 17:18:24 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 17:18:24 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 17:19:53 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 17:19:53 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 17:19:59 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-28 17:20:02 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-05-28 17:20:02 [GET] [/ups//ups//ups//ups//assets/turn.png] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:9 \nCalled from microbe.control.HomeController::execute line 9
+2018-05-28 17:21:17 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 17:21:18 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 17:24:32 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 17:24:32 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 17:27:21 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 17:27:21 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 17:28:16 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 17:28:17 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 17:28:24 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-28 17:33:11 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 17:33:11 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 17:33:17 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-05-28 17:34:21 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 17:34:21 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 17:36:02 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-28 17:40:46 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-28 17:40:46 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-29 07:55:24 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-29 07:55:24 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-29 07:59:21 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-29 07:59:21 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-29 07:59:35 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-29 07:59:35 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-29 08:03:38 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-29 08:03:38 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-29 08:06:20 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-29 08:06:20 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-05-29 08:09:38 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yu
+2018-05-29 08:09:39 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]

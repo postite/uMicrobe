@@ -1,0 +1,5 @@
+package microbe;
+
+interface IBehaviour{
+
+}

@@ -1,0 +1,61 @@
+
+-lib erazor
+-lib tink_core
+ -lib thx.core
+-cp src
+
+-lib ufPostite
+-lib random
+-lib msignal
+-cp src/test
+-debug
+#-dce no
+
+--times
+#--macro keep('StringBuf')
+#-D online
+
+#--connect 7000
+
+
+--each
+
+-lib erazor
+-lib thx.unit
+-lib tink_core
+-lib thx.color
+-lib thx.core
+-lib sortable
+-lib pushstate
+
+
+-main app.App
+-D client
+-lib lessie
+-D forceLessie
+-D lessieOutput=lessie/lessie.css
+-lib ufront-client
+
+#-D source-map
+#-D source-map-content
+-js www/js/client.js
+
+--next 
+-D sqlite
+-lib ufront-mvc
+-lib ufront-orm
+-lib image:0.1.0
+-D server
+-lib record-macros
+-main app.App
+
+-neko www/index.n
+
+
+
+
+#///le bug duretour
+ #be sure to activate because of Mail
+-cmd open -a safari  http://localhost:2000/
+#-cmd  rsync -Haurov  --exclude 'web/www/table.db'  -e ssh web/www/   postite@ssh-postite.alwaysdata.net:murmur
+#-cmd open -a safari  http://www.murmurations.postite.com

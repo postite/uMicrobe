@@ -1,0 +1,37 @@
+
+
+-cp src
+
+-lib ufPostite
+-lib random
+-lib msignal
+-cp src/test
+-debug
+#-dce no
+
+--times
+#--macro keep('StringBuf')
+#-D online
+
+--connect 7200
+-lib erazor
+-lib thx.unit
+-lib tink_core
+-lib thx.color
+-lib thx.core
+-lib sortable
+-lib pushstate
+-lib record-macros
+
+-main app.App
+-D client
+ -lib lessie
+ -D forceLessie
+ -D lessieOutput=lessie/lessie.css
+-D eval-stack
+#-lib ufront-mvc
+-lib ufront-client
+#-lib minject
+#-D source-map
+#-D source-map-content
+-js www/js/client.js

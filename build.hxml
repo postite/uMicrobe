@@ -1,0 +1,7 @@
+
+# --connect 7200
+# --each
+ client.hxml
+--next
+server.hxml
+-cmd open http://microbe.local

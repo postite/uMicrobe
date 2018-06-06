@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Capital Framework
+   Form Element Styling
+   ========================================================================== */
+/* ==========================================================================
+   cf-theme-cfpb
+   Color variables
+   ========================================================================== */
+/**
+ * When adding this theme to a CFPB project using a version of our color palette
+ * that predates November 13, 2015, you will have some deprecated color
+ * variables to deal with.
+ *
+ * Run the list of project-wide Find and Replace actions given below
+ * to update deprecated variables to their current equivalents.
+ *
+ * IMPORTANT: You must execute these in the specified order
+ * to ensure that you don't overwrite previous updates.
+ *
+ * ALSO IMPORTANT: When running replacements #3, #7, and #19, ensure that you
+ * have the regular expression option turned on in your editor.
+ * Failure to do so will replace the partial match in every tint of that color.
+ */
+/* ==========================================================================
+   Capital Framework
+   Less variables
+   ========================================================================== */
+/*
+@import (less) '../../cf-grid/src/cf-grid.less';
+@import (less) '../../cf-core/src/cf-core.less';
+@import (less) '../../cf-buttons/src/cf-buttons.less';
+@import (less) '../../cf-icons/src/cf-icons.less';
+
+
+//
+// Import atoms
+//
+
+@import (less) 'atoms/label.less';
+@import (less) 'atoms/legend.less';
+@import (less) 'atoms/multiselect.less';
+@import (less) 'atoms/select.less';
+@import (less) 'atoms/text-input.less';
+
+
+//
+// Import molecules
+//
+
+@import (less) 'molecules/btn-inside-input.less';
+@import (less) 'molecules/form-fields.less';
+
+//
+// Import organisms
+//
+
+@import (less) 'organisms/form.less';
+*/
+.medium-editor-insert-plugin {
+  min-width: 300px;
+  min-height: 300px;
+  background-color: grey;
+}
+input[type='text'] {
+  appearance: none;
+  display: inline-block;
+  padding: 0.4375em;
+  border: 1px solid #919395;
+  background: #fff;
+  color: #101820;
+}
+input[type='text']:hover,
+input[type='text'].hover {
+  border-color: #0072ce;
+  outline: 1px solid #0072ce;
+}
+input[type='text']:focus,
+input[type='text'].focus {
+  border-color: #0072ce;
+  box-shadow: 0 0 0 1px #0072ce;
+  outline: 1px dotted #0072ce;
+  outline-offset: 2px;
+}
+input[type='text']:disabled,
+input[type='text']:disabled:hover,
+input[type='text']:disabled.hover,
+input[type='text']:disabled:focus,
+input[type='text']:disabled.focus {
+  color: #5a5d61;
+  background-color: #e7e8e9;
+  cursor: not-allowed;
+  border-color: #919395;
+  outline: none;
+}
+input[type='text']__error {
+  border-color: #d14124;
+  outline: 1px solid #d14124;
+}
+input[type='text']__warning {
+  border-color: #ff9e1b;
+  outline: 1px solid #ff9e1b;
+}
+input[type='text']__success {
+  border-color: #20aa3f;
+  outline: 1px solid #20aa3f;
+}
+::-webkit-search-decoration {
+  appearance: none;
+}
+::placeholder {
+  color: #5a5d61;
+}
+.mic-walker {
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: flex-start;
+  justify-content: space-around;
+}
+.mic-walk {
+  width: 30%;
+  border-left: 1px solid black;
+  padding: 1em;
+}

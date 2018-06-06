@@ -1,0 +1,46 @@
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "buildmicrobe",
+            "command": "open",
+            "args": [
+                "-a",
+                "firefox",
+                "http://microbe.local"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "build client",
+                "build server"
+            ],
+            "problemMatcher": [
+                "$haxe"
+            ]
+        },
+        {
+            "label": "build client",
+            "command": "haxe",
+            "args": [
+                "client.hxml"
+            ],
+            "problemMatcher": [
+                "$haxe"
+            ]
+        },
+        {
+            "label": "build server",
+            "command": "haxe",
+            "args": [
+                "server.hxml"
+            ],
+            "problemMatcher": [
+                "$haxe"
+            ]
+        }
+    ]
+}

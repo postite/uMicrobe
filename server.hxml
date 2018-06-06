@@ -1,0 +1,36 @@
+--connect 7200
+
+-lib erazor
+
+-lib thx.core
+#cp deps
+-lib minject
+-lib compiletime
+-lib record-macros
+-lib ufPostite
+-lib random
+-lib msignal
+-cp src/test
+-lib tink_core 
+-lib hx3compat
+-debug
+-dce no
+-cp ./
+--times
+#--macro keep('StringBuf')
+#-D online
+#--connect 7200
+
+-D sqlite
+-lib ufront-mvc
+#-cp ufront-mvc/src
+-lib tink_macro
+-lib ufront-orm
+-lib image:0.1.0
+-D server
+-cp src
+
+-main app.App
+-D php7
+-php www/
+#-neko www/index.n

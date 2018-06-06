@@ -1,0 +1,16 @@
+{
+    "name": "microbe",
+    "url" : "",
+    "license": "MIT",
+    "tags": ["ufront", "orm"],
+    "description": "one desc",
+    "version": "0.8",
+    "classPath": "src",
+    "releasenote": "still trying",
+    "contributors": ["postite"],
+    "dependencies": {
+      "record-macros": "",
+      "compiletime": ""
+      
+    }
+  }

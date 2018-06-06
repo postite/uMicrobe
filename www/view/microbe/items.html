@@ -1,0 +1,12 @@
+<div id="items">
+	::foreach items::
+	<div>	
+		<a href="/::micPath::/affiche/::mod::/mod/::id::" rel="pushstate">::titre::</a>
+	</div>	
+	::end::
+<div>	
+	::if mod::
+	<a href="/::micPath::/mods/plus/::mod::" rel="pushstate">plus</a>
+	::end::
+</div>
+</div>
