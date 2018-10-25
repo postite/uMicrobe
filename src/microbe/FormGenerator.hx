@@ -1,6 +1,6 @@
 package microbe;
 import microbe.Microbe;
-import microbe.comps.Wrapper;
+
 @:less("comps/style/forms.less")
 class FormGenerator<T> {
 
@@ -12,10 +12,11 @@ class FormGenerator<T> {
 	public function new (?formurl:String="",?classes:Array<String>){
 		this.formurl= formurl;
 		this.classes= (classes!=null)? classes :[];
+		
 	}
 	
 	public function setData(d:T):FormGenerator<T>{
-		this.data=d;
+		this.data=d; 
 		return this;
 	}
 

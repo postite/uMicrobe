@@ -41,7 +41,7 @@ class Status extends HxEnum {
 
 
 	/**
-	 * @param int $id
+	 * @param string $id
 	 * 
 	 * @return Status
 	 */

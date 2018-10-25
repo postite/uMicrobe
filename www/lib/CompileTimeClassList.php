@@ -150,7 +150,7 @@ Boot::registerMeta(CompileTimeClassList::class, new HxAnon(["obj" => new HxAnon(
 	]),
 	\Array_hx::wrap([
 		"null,true,ufront.web.Controller",
-		"microbe.control.HomeController,microbe.control.MicrobeController,ufront.app.DefaultUfrontController",
+		"microbe.control.HomeController,microbe.control.MicrobeCompileController,microbe.control.MicrobeController,ufront.app.DefaultUfrontController",
 	]),
 	\Array_hx::wrap([
 		"null,true,ufront.api.UFApi",
@@ -158,7 +158,7 @@ Boot::registerMeta(CompileTimeClassList::class, new HxAnon(["obj" => new HxAnon(
 	]),
 	\Array_hx::wrap([
 		"null,true,ufront.web.Controller",
-		"microbe.control.HomeController,microbe.control.MicrobeController,ufront.app.DefaultUfrontController",
+		"microbe.control.HomeController,microbe.control.MicrobeCompileController,microbe.control.MicrobeController,ufront.app.DefaultUfrontController",
 	]),
 	\Array_hx::wrap([
 		"null,true,ufront.api.UFApi",

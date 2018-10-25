@@ -1,10 +1,10 @@
 {
     "name": "microbe",
-    "url" : "",
+    "url" : "http://postite.com",
     "license": "MIT",
     "tags": ["ufront", "orm"],
     "description": "one desc",
-    "version": "0.8",
+    "version": "0.8.0",
     "classPath": "src",
     "releasenote": "still trying",
     "contributors": ["postite"],

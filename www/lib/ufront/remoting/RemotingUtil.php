@@ -25,133 +25,24 @@ class RemotingUtil {
 	 * @return void
 	 */
 	static public function defaultErrorHandler ($error) {
-		#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:123: lines 123-146
+		#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:138: lines 138-161
 		switch ($error->index) {
 			case 0:
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:124: characters 55-67
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:139: characters 55-67
 				$responseData = $error->params[2];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:124: characters 41-53
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:139: characters 41-53
 				$responseCode = $error->params[1];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:124: characters 21-39
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:139: characters 21-39
 				$remotingCallString = $error->params[0];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:125: characters 5-10
-				(Log::$trace)("Error during remoting call " . ($remotingCallString??'null') . ": The HTTP Request returned status [" . ($responseCode??'null') . "].", new HxAnon([
-					"fileName" => "ufront/remoting/RemotingUtil.hx",
-					"lineNumber" => 125,
-					"className" => "ufront.remoting.RemotingUtil",
-					"methodName" => "defaultErrorHandler",
-				]));
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:126: characters 5-10
-				(Log::$trace)("Returned data: " . ($responseData??'null'), new HxAnon([
-					"fileName" => "ufront/remoting/RemotingUtil.hx",
-					"lineNumber" => 126,
-					"className" => "ufront.remoting.RemotingUtil",
-					"methodName" => "defaultErrorHandler",
-				]));
-
-				break;
-			case 1:
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:127: characters 43-46
-				$err = $error->params[1];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:127: characters 23-41
-				$remotingCallString1 = $error->params[0];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:128: characters 5-10
-				(Log::$trace)("Error during remoting call " . ($remotingCallString1??'null') . ": API or Method is not found or not available in the remoting context.", new HxAnon([
-					"fileName" => "ufront/remoting/RemotingUtil.hx",
-					"lineNumber" => 128,
-					"className" => "ufront.remoting.RemotingUtil",
-					"methodName" => "defaultErrorHandler",
-				]));
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:129: characters 5-10
-				(Log::$trace)("Error message: " . ($err??'null'), new HxAnon([
-					"fileName" => "ufront/remoting/RemotingUtil.hx",
-					"lineNumber" => 129,
-					"className" => "ufront.remoting.RemotingUtil",
-					"methodName" => "defaultErrorHandler",
-				]));
-
-				break;
-			case 2:
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:130: characters 54-59
-				$stack = $error->params[2];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:130: characters 51-52
-				$e = $error->params[1];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:130: characters 31-49
-				$remotingCallString2 = $error->params[0];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:131: characters 5-10
-				(Log::$trace)("Error during remoting call " . ($remotingCallString2??'null') . ": The server threw an error \"" . (\Std::string($e)??'null') . "\".", new HxAnon([
-					"fileName" => "ufront/remoting/RemotingUtil.hx",
-					"lineNumber" => 131,
-					"className" => "ufront.remoting.RemotingUtil",
-					"methodName" => "defaultErrorHandler",
-				]));
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:132: characters 5-10
-				(Log::$trace)($stack, new HxAnon([
-					"fileName" => "ufront/remoting/RemotingUtil.hx",
-					"lineNumber" => 132,
-					"className" => "ufront.remoting.RemotingUtil",
-					"methodName" => "defaultErrorHandler",
-				]));
-
-				break;
-			case 3:
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:133: characters 55-56
-				$e1 = $error->params[1];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:133: characters 35-53
-				$remotingCallString3 = $error->params[0];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:134: characters 5-10
-				(Log::$trace)("Error during remoting call " . ($remotingCallString3??'null') . ": The client throw an error \"" . (\Std::string($e1)??'null') . "\" during the remoting callback.", new HxAnon([
-					"fileName" => "ufront/remoting/RemotingUtil.hx",
-					"lineNumber" => 134,
-					"className" => "ufront.remoting.RemotingUtil",
-					"methodName" => "defaultErrorHandler",
-				]));
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:135: characters 5-10
-				(Log::$trace)("Compiling with \"-debug\" will prevent this error being caught, so you can use your browser's debugger to collect more information.", new HxAnon([
-					"fileName" => "ufront/remoting/RemotingUtil.hx",
-					"lineNumber" => 135,
-					"className" => "ufront.remoting.RemotingUtil",
-					"methodName" => "defaultErrorHandler",
-				]));
-
-				break;
-			case 4:
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:136: characters 62-65
-				$err1 = $error->params[2];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:136: characters 49-60
-				$troubleLine = $error->params[1];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:136: characters 29-47
-				$remotingCallString4 = $error->params[0];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:137: characters 5-10
-				(Log::$trace)("Error during remoting call " . ($remotingCallString4??'null') . ": Failed to unserialize this line in the response: \"" . ($err1??'null') . "\"", new HxAnon([
-					"fileName" => "ufront/remoting/RemotingUtil.hx",
-					"lineNumber" => 137,
-					"className" => "ufront.remoting.RemotingUtil",
-					"methodName" => "defaultErrorHandler",
-				]));
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:138: characters 5-10
-				(Log::$trace)("The line that failed: \"" . ($err1??'null') . "\"", new HxAnon([
-					"fileName" => "ufront/remoting/RemotingUtil.hx",
-					"lineNumber" => 138,
-					"className" => "ufront.remoting.RemotingUtil",
-					"methodName" => "defaultErrorHandler",
-				]));
-
-				break;
-			case 5:
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:139: characters 48-60
-				$responseData1 = $error->params[1];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:139: characters 28-46
-				$remotingCallString5 = $error->params[0];
 				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:140: characters 5-10
-				(Log::$trace)("Error during remoting call " . ($remotingCallString5??'null') . ": No remoting result in data.", new HxAnon([
+				(Log::$trace)("Error during remoting call " . ($remotingCallString??'null') . ": The HTTP Request returned status [" . ($responseCode??'null') . "].", new HxAnon([
 					"fileName" => "ufront/remoting/RemotingUtil.hx",
 					"lineNumber" => 140,
 					"className" => "ufront.remoting.RemotingUtil",
 					"methodName" => "defaultErrorHandler",
 				]));
 				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:141: characters 5-10
-				(Log::$trace)("Returned data: " . ($responseData1??'null'), new HxAnon([
+				(Log::$trace)("Returned data: " . ($responseData??'null'), new HxAnon([
 					"fileName" => "ufront/remoting/RemotingUtil.hx",
 					"lineNumber" => 141,
 					"className" => "ufront.remoting.RemotingUtil",
@@ -159,26 +50,135 @@ class RemotingUtil {
 				]));
 
 				break;
-			case 6:
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:142: characters 42-46
-				$data = $error->params[1];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:142: characters 22-40
-				$remotingCallString6 = $error->params[0];
+			case 1:
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:142: characters 43-46
+				$err = $error->params[1];
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:142: characters 23-41
+				$remotingCallString1 = $error->params[0];
 				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:143: characters 5-10
-				(Log::$trace)("The remoting call " . ($remotingCallString6??'null') . " functioned correctly, but the API returned a failure: " . ($data??'null'), new HxAnon([
+				(Log::$trace)("Error during remoting call " . ($remotingCallString1??'null') . ": API or Method is not found or not available in the remoting context.", new HxAnon([
 					"fileName" => "ufront/remoting/RemotingUtil.hx",
 					"lineNumber" => 143,
 					"className" => "ufront.remoting.RemotingUtil",
 					"methodName" => "defaultErrorHandler",
 				]));
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:144: characters 5-10
+				(Log::$trace)("Error message: " . ($err??'null'), new HxAnon([
+					"fileName" => "ufront/remoting/RemotingUtil.hx",
+					"lineNumber" => 144,
+					"className" => "ufront.remoting.RemotingUtil",
+					"methodName" => "defaultErrorHandler",
+				]));
+
+				break;
+			case 2:
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:145: characters 54-59
+				$stack = $error->params[2];
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:145: characters 51-52
+				$e = $error->params[1];
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:145: characters 31-49
+				$remotingCallString2 = $error->params[0];
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:146: characters 5-10
+				(Log::$trace)("Error during remoting call " . ($remotingCallString2??'null') . ": The server threw an error \"" . (\Std::string($e)??'null') . "\".", new HxAnon([
+					"fileName" => "ufront/remoting/RemotingUtil.hx",
+					"lineNumber" => 146,
+					"className" => "ufront.remoting.RemotingUtil",
+					"methodName" => "defaultErrorHandler",
+				]));
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:147: characters 5-10
+				(Log::$trace)($stack, new HxAnon([
+					"fileName" => "ufront/remoting/RemotingUtil.hx",
+					"lineNumber" => 147,
+					"className" => "ufront.remoting.RemotingUtil",
+					"methodName" => "defaultErrorHandler",
+				]));
+
+				break;
+			case 3:
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:148: characters 55-56
+				$e1 = $error->params[1];
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:148: characters 35-53
+				$remotingCallString3 = $error->params[0];
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:149: characters 5-10
+				(Log::$trace)("Error during remoting call " . ($remotingCallString3??'null') . ": The client throw an error \"" . (\Std::string($e1)??'null') . "\" during the remoting callback.", new HxAnon([
+					"fileName" => "ufront/remoting/RemotingUtil.hx",
+					"lineNumber" => 149,
+					"className" => "ufront.remoting.RemotingUtil",
+					"methodName" => "defaultErrorHandler",
+				]));
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:150: characters 5-10
+				(Log::$trace)("Compiling with \"-debug\" will prevent this error being caught, so you can use your browser's debugger to collect more information.", new HxAnon([
+					"fileName" => "ufront/remoting/RemotingUtil.hx",
+					"lineNumber" => 150,
+					"className" => "ufront.remoting.RemotingUtil",
+					"methodName" => "defaultErrorHandler",
+				]));
+
+				break;
+			case 4:
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:151: characters 62-65
+				$err1 = $error->params[2];
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:151: characters 49-60
+				$troubleLine = $error->params[1];
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:151: characters 29-47
+				$remotingCallString4 = $error->params[0];
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:152: characters 5-10
+				(Log::$trace)("Error during remoting call " . ($remotingCallString4??'null') . ": Failed to unserialize this line in the response: \"" . ($err1??'null') . "\"", new HxAnon([
+					"fileName" => "ufront/remoting/RemotingUtil.hx",
+					"lineNumber" => 152,
+					"className" => "ufront.remoting.RemotingUtil",
+					"methodName" => "defaultErrorHandler",
+				]));
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:153: characters 5-10
+				(Log::$trace)("The line that failed: \"" . ($err1??'null') . "\"", new HxAnon([
+					"fileName" => "ufront/remoting/RemotingUtil.hx",
+					"lineNumber" => 153,
+					"className" => "ufront.remoting.RemotingUtil",
+					"methodName" => "defaultErrorHandler",
+				]));
+
+				break;
+			case 5:
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:154: characters 48-60
+				$responseData1 = $error->params[1];
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:154: characters 28-46
+				$remotingCallString5 = $error->params[0];
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:155: characters 5-10
+				(Log::$trace)("Error during remoting call " . ($remotingCallString5??'null') . ": No remoting result in data.", new HxAnon([
+					"fileName" => "ufront/remoting/RemotingUtil.hx",
+					"lineNumber" => 155,
+					"className" => "ufront.remoting.RemotingUtil",
+					"methodName" => "defaultErrorHandler",
+				]));
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:156: characters 5-10
+				(Log::$trace)("Returned data: " . ($responseData1??'null'), new HxAnon([
+					"fileName" => "ufront/remoting/RemotingUtil.hx",
+					"lineNumber" => 156,
+					"className" => "ufront.remoting.RemotingUtil",
+					"methodName" => "defaultErrorHandler",
+				]));
+
+				break;
+			case 6:
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:157: characters 42-46
+				$data = $error->params[1];
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:157: characters 22-40
+				$remotingCallString6 = $error->params[0];
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:158: characters 5-10
+				(Log::$trace)("The remoting call " . ($remotingCallString6??'null') . " functioned correctly, but the API returned a failure: " . ($data??'null'), new HxAnon([
+					"fileName" => "ufront/remoting/RemotingUtil.hx",
+					"lineNumber" => 158,
+					"className" => "ufront.remoting.RemotingUtil",
+					"methodName" => "defaultErrorHandler",
+				]));
 				break;
 			case 7:
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:144: characters 28-29
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:159: characters 28-29
 				$e2 = $error->params[0];
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:145: characters 5-10
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:160: characters 5-10
 				(Log::$trace)("Unknown error encountered during remoting call: " . (\Std::string($e2)??'null'), new HxAnon([
 					"fileName" => "ufront/remoting/RemotingUtil.hx",
-					"lineNumber" => 145,
+					"lineNumber" => 160,
 					"className" => "ufront.remoting.RemotingUtil",
 					"methodName" => "defaultErrorHandler",
 				]));
@@ -222,20 +222,20 @@ class RemotingUtil {
 		$errors = new \Array_hx();
 		#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:36: characters 3-50
 		$onError = RemotingUtil::wrapErrorHandler($errorHandler);
-		#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:38: lines 38-90
+		#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:38: lines 38-105
 		if (HxString::substr($response, 0, 2) !== "hx") {
 			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:39: characters 4-61
 			$onError(RemotingError::RNoRemotingResult($remotingCallString, $response));
 		} else {
-			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:42: lines 42-89
+			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:42: lines 42-104
 			$_g = 0;
-			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:42: lines 42-89
+			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:42: lines 42-104
 			$_g1 = \Array_hx::wrap(explode("\x0A", $response));
-			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:42: lines 42-89
+			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:42: lines 42-104
 			while ($_g < $_g1->length) {
 				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:42: characters 10-14
 				$line = ($_g1->arr[$_g] ?? null);
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:42: lines 42-89
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:42: lines 42-104
 				$_g = $_g + 1;
 				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:43: characters 5-29
 				if ($line === "") {
@@ -247,26 +247,29 @@ class RemotingUtil {
 				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:44: characters 13-29
 				switch ($_g2) {
 					case "hxe":
-						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:81: characters 7-56
+						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:92: characters 7-56
 						$s = new RemotingUnserializer(HxString::substr($line, 3));
-						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:83: lines 83-84
+						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:94: lines 94-98
 						try {
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:83: characters 12-27
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:94: characters 12-27
 							$ret = $s->unserialize();
 						} catch (\Throwable $__hx__caught_e) {
 							CallStack::saveExceptionTrace($__hx__caught_e);
 							$__hx__real_e = ($__hx__caught_e instanceof HxException ? $__hx__caught_e->e : $__hx__caught_e);
 							$e = $__hx__real_e;
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:84: characters 25-90
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:96: characters 9-74
 							$errors->arr[$errors->length] = RemotingError::RServerSideException($remotingCallString, $e, $stack);
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:84: characters 25-90
-							$ret = ++$errors->length;
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:96: characters 9-74
+							++$errors->length;
+
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:97: characters 9-20
+							return;
 						}
 						break;
 					case "hxr":
 						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:46: characters 7-56
 						$s1 = new RemotingUnserializer(HxString::substr($line, 3));
-						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:48: lines 48-49
+						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:48: lines 48-53
 						try {
 							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:48: characters 12-27
 							$ret = $s1->unserialize();
@@ -274,96 +277,105 @@ class RemotingUtil {
 							CallStack::saveExceptionTrace($__hx__caught_e);
 							$__hx__real_e = ($__hx__caught_e instanceof HxException ? $__hx__caught_e->e : $__hx__caught_e);
 							$e1 = $__hx__real_e;
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:49: characters 77-91
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:51: characters 61-75
 							$x = HxString::substr($line, 3);
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:49: characters 25-100
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:51: characters 9-84
 							$x1 = RemotingError::RUnserializeFailed($remotingCallString, $x, "" . (\Std::string($e1)??'null'));
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:49: characters 25-100
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:51: characters 9-84
 							$errors->arr[$errors->length] = $x1;
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:49: characters 25-100
-							$ret = ++$errors->length;
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:51: characters 9-84
+							++$errors->length;
+
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:52: characters 9-20
+							return;
 						}
-						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:51: characters 7-22
+						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:55: characters 7-22
 						$hxrFound = true;
 						break;
 					case "hxs":
-						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:75: characters 7-56
+						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:83: characters 7-56
 						$s2 = new RemotingUnserializer(HxString::substr($line, 3));
-						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:77: lines 77-78
+						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:85: lines 85-89
 						try {
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:77: characters 12-27
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:85: characters 12-27
 							$stack = $s2->unserialize();
 						} catch (\Throwable $__hx__caught_e) {
 							CallStack::saveExceptionTrace($__hx__caught_e);
 							$__hx__real_e = ($__hx__caught_e instanceof HxException ? $__hx__caught_e->e : $__hx__caught_e);
 							$e2 = $__hx__real_e;
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:78: characters 77-91
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:87: characters 62-76
 							$x2 = HxString::substr($line, 3);
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:78: characters 25-100
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:87: characters 10-85
 							$x3 = RemotingError::RUnserializeFailed($remotingCallString, $x2, "" . (\Std::string($e2)??'null'));
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:78: characters 25-100
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:87: characters 10-85
 							$errors->arr[$errors->length] = $x3;
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:78: characters 25-100
-							$stack = ++$errors->length;
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:87: characters 10-85
+							++$errors->length;
+
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:88: characters 10-21
+							return;
 						}
 						break;
 					case "hxt":
-						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:53: characters 7-56
+						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:57: characters 7-56
 						$s3 = new RemotingUnserializer(HxString::substr($line, 3));
-						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:54: lines 54-57
+						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:58: lines 58-65
 						$m = null;
-						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:55: lines 55-56
+						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:59: lines 59-63
 						try {
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:54: lines 54-57
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:58: lines 58-65
 							$m = $s3->unserialize();
 						} catch (\Throwable $__hx__caught_e) {
 							CallStack::saveExceptionTrace($__hx__caught_e);
 							$__hx__real_e = ($__hx__caught_e instanceof HxException ? $__hx__caught_e->e : $__hx__caught_e);
 							$e3 = $__hx__real_e;
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:56: characters 77-91
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:61: characters 62-76
 							$x4 = HxString::substr($line, 3);
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:56: characters 25-100
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:61: characters 10-85
 							$x5 = RemotingError::RUnserializeFailed($remotingCallString, $x4, "" . (\Std::string($e3)??'null'));
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:56: characters 25-100
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:61: characters 10-85
 							$errors->arr[$errors->length] = $x5;
-							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:54: lines 54-57
-							$m = ++$errors->length;
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:61: characters 10-85
+							++$errors->length;
+
+							#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:62: characters 9-20
+							return;
 						}
-						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:71: characters 8-43
+						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:79: characters 8-43
 						$m->pos->fileName = "[R]" . ($m->pos->fileName??'null');
-						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:72: characters 8-52
+						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:80: characters 8-52
 						(Log::$trace)("[" . (\Std::string($m->type)??'null') . "]" . (\Std::string($m->msg)??'null'), $m->pos);
 						break;
 					default:
-						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:87: characters 7-94
+						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:102: characters 7-94
 						$errors->arr[$errors->length] = RemotingError::RUnserializeFailed($remotingCallString, $line, "Invalid line in response");
-						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:87: characters 7-94
+						#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:102: characters 7-94
 						++$errors->length;
 						break;
 				}
 
 			}
 		}
-		#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:92: lines 92-103
+		#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:107: lines 107-118
 		if ($errors->length === 0) {
-			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:93: lines 93-101
+			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:108: lines 108-116
 			if ($hxrFound) {
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:96: characters 6-21
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:111: characters 6-21
 				$onResult($ret);
 			} else {
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:101: characters 9-66
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:116: characters 9-66
 				$onError(RemotingError::RNoRemotingResult($remotingCallString, $response));
 			}
 		} else {
-			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:103: characters 8-44
+			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:118: characters 8-44
 			$_g3 = 0;
-			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:103: characters 8-44
+			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:118: characters 8-44
 			while ($_g3 < $errors->length) {
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:103: characters 14-17
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:118: characters 14-17
 				$err = ($errors->arr[$_g3] ?? null);
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:103: characters 8-44
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:118: characters 8-44
 				$_g3 = $_g3 + 1;
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:103: characters 30-44
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:118: characters 30-44
 				$onError($err);
 			}
 		}
@@ -379,14 +391,14 @@ class RemotingUtil {
 	 * @return \Closure
 	 */
 	static public function wrapErrorHandler ($errorHandler) {
-		#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:111: lines 111-116
+		#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:126: lines 126-131
 		return function ($e)  use (&$errorHandler) {
-			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:112: lines 112-115
+			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:127: lines 127-130
 			if (Boot::is($e, Boot::getClass(RemotingError::class))) {
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:113: characters 5-20
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:128: characters 5-20
 				$errorHandler($e);
 			} else {
-				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:115: characters 5-41
+				#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/remoting/RemotingUtil.hx:130: characters 5-41
 				$errorHandler(RemotingError::RUnknownException($e));
 			}
 		};

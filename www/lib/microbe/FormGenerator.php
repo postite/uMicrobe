@@ -41,18 +41,18 @@ class FormGenerator {
 	 * @return Microbe
 	 */
 	static public function instanciateComp ($comp, $data, $name) {
-		#src/microbe/FormGenerator.hx:37: characters 3-49
+		#src/microbe/FormGenerator.hx:38: characters 3-49
 		$fullClassPath = "microbe.comps.atoms." . ($comp??'null');
-		#src/microbe/FormGenerator.hx:38: lines 38-39
+		#src/microbe/FormGenerator.hx:39: lines 39-40
 		if (HxString::indexOf($comp, ".") !== -1) {
-			#src/microbe/FormGenerator.hx:39: characters 3-21
+			#src/microbe/FormGenerator.hx:40: characters 3-21
 			$fullClassPath = $comp;
 		}
-		#src/microbe/FormGenerator.hx:40: characters 3-27
+		#src/microbe/FormGenerator.hx:41: characters 3-27
 		$mic = null;
-		#src/microbe/FormGenerator.hx:41: lines 41-44
+		#src/microbe/FormGenerator.hx:42: lines 42-45
 		try {
-			#src/microbe/FormGenerator.hx:42: characters 4-74
+			#src/microbe/FormGenerator.hx:43: characters 4-74
 			$mic = \Type::createInstance(\Type::resolveClass($fullClassPath), \Array_hx::wrap([
 				$data,
 				$name,
@@ -61,21 +61,21 @@ class FormGenerator {
 			CallStack::saveExceptionTrace($__hx__caught_e);
 			$__hx__real_e = ($__hx__caught_e instanceof HxException ? $__hx__caught_e->e : $__hx__caught_e);
 			$msg = $__hx__real_e;
-			#src/microbe/FormGenerator.hx:44: characters 3-8
+			#src/microbe/FormGenerator.hx:45: characters 3-8
 			throw new HxException(" no components found in FormGenerator for" . ($fullClassPath??'null'));
 		}
-		#src/microbe/FormGenerator.hx:45: lines 45-48
+		#src/microbe/FormGenerator.hx:46: lines 46-49
 		try {
-			#src/microbe/FormGenerator.hx:46: characters 3-27
+			#src/microbe/FormGenerator.hx:47: characters 3-27
 			FormGenerator::$injector->injectInto($mic);
 		} catch (\Throwable $__hx__caught_e) {
 			CallStack::saveExceptionTrace($__hx__caught_e);
 			$__hx__real_e = ($__hx__caught_e instanceof HxException ? $__hx__caught_e->e : $__hx__caught_e);
 			$msg1 = $__hx__real_e;
-			#src/microbe/FormGenerator.hx:48: characters 3-8
+			#src/microbe/FormGenerator.hx:49: characters 3-8
 			throw new HxException(" no injector found in FormGenerator do it via App please >" . (\Std::string($mic)??'null') . (\Std::string(FormGenerator::$injector->getValueForType("String", "upsPath"))??'null'));
 		}
-		#src/microbe/FormGenerator.hx:49: characters 3-13
+		#src/microbe/FormGenerator.hx:50: characters 3-13
 		return $mic;
 	}
 
@@ -88,23 +88,23 @@ class FormGenerator {
 	 * @return IMicrobeWrapper
 	 */
 	static public function instanciateWrapper ($wrapper, $data, $name) {
-		#src/microbe/FormGenerator.hx:52: characters 3-54
+		#src/microbe/FormGenerator.hx:53: characters 3-54
 		$wrap = \Type::createInstance($wrapper, \Array_hx::wrap([
 			$data,
 			$name,
 		]));
-		#src/microbe/FormGenerator.hx:54: lines 54-57
+		#src/microbe/FormGenerator.hx:55: lines 55-58
 		try {
-			#src/microbe/FormGenerator.hx:55: characters 3-28
+			#src/microbe/FormGenerator.hx:56: characters 3-28
 			FormGenerator::$injector->injectInto($wrap);
 		} catch (\Throwable $__hx__caught_e) {
 			CallStack::saveExceptionTrace($__hx__caught_e);
 			$__hx__real_e = ($__hx__caught_e instanceof HxException ? $__hx__caught_e->e : $__hx__caught_e);
 			$msg = $__hx__real_e;
-			#src/microbe/FormGenerator.hx:57: characters 3-8
+			#src/microbe/FormGenerator.hx:58: characters 3-8
 			throw new HxException(" no injector found in FormGenerator do it via App please");
 		}
-		#src/microbe/FormGenerator.hx:59: characters 3-14
+		#src/microbe/FormGenerator.hx:60: characters 3-14
 		return $wrap;
 	}
 
@@ -116,9 +116,9 @@ class FormGenerator {
 	 * @return void
 	 */
 	public function __construct ($formurl = "", $classes = null) {
-		#src/microbe/FormGenerator.hx:12: lines 12-15
+		#src/microbe/FormGenerator.hx:12: lines 12-16
 		if ($formurl === null) {
-			#src/microbe/FormGenerator.hx:12: lines 12-15
+			#src/microbe/FormGenerator.hx:12: lines 12-16
 			$formurl = "";
 		}
 		#src/microbe/FormGenerator.hx:13: characters 3-24
@@ -134,11 +134,11 @@ class FormGenerator {
 	 * @return string
 	 */
 	public function generate ($m) {
-		#src/microbe/FormGenerator.hx:23: characters 3-18
+		#src/microbe/FormGenerator.hx:24: characters 3-18
 		$m->setData($this->data);
-		#src/microbe/FormGenerator.hx:25: characters 3-27
+		#src/microbe/FormGenerator.hx:26: characters 3-27
 		$c = $this->classes->join(" ");
-		#src/microbe/FormGenerator.hx:26: lines 26-33
+		#src/microbe/FormGenerator.hx:27: lines 27-34
 		return "\x0A\x09\x09<style> input{\x0A\x09\x09\x09display:block;\x0A\x09\x09}\x0A\x09\x09</style>\x0A\x09\x09<form action=\"" . ($this->formurl??'null') . "\" class=\"" . ($c??'null') . "\" rel=\"pushstate\" method=\"POST\">\x0A\x09\x09" . ($m->render()??'null') . "\x0A\x09\x09</form>";
 	}
 
@@ -149,9 +149,9 @@ class FormGenerator {
 	 * @return FormGenerator
 	 */
 	public function setData ($d) {
-		#src/microbe/FormGenerator.hx:18: characters 3-14
-		$this->data = $d;
 		#src/microbe/FormGenerator.hx:19: characters 3-14
+		$this->data = $d;
+		#src/microbe/FormGenerator.hx:20: characters 3-14
 		return $this;
 	}
 }

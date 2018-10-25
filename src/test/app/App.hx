@@ -1,7 +1,6 @@
 package app;
+
 import ufront.MVC;
-import ufront.app.UfrontApplication;
-import control.*;
  
 import middleware.ResponseSignal;
 
@@ -13,22 +12,33 @@ using Lambda;
 class App {
 	
 
-   #if server static public var ufApp:UfrontApplication;#end
+    #if server static public var ufApp:UfrontApplication;#end
 	#if client static public var ufApp:ClientJsApplication; #end
 
-	public function new() {
+       public function new() {
 		
-		trace("yoo");
+        trace("yoooo");
+        #if js 
         
-	}
+        js.Browser.console.log(
+              "haxe-ver"
+            );
+        
+        js.Browser.console.log(
+            haxe.macro.Compiler.getDefine("haxe_ver")
+            );
+        #end
+        
+        
+    }
 
-	static public function main(){
+    static public function main(){
         CompileTime.importPackage("microbe.comps.atoms");
         CompileTime.importPackage("microbe.comps.molecules");
         CompileTime.importPackage("model");
         CompileTime.importPackage("microbe.model");
 		#if server
-		ufApp = new UfrontApplication({
+        ufApp = new UfrontApplication({
             indexController: microbe.control.HomeController,
             remotingApi: app.Apis,
             logFile:"logs/app.log",
@@ -53,14 +63,14 @@ class App {
 
         #elseif client
 			// Initialise the app on the client and respond to "pushstate" requests as a single-page-app.
-			   ufApp = new ClientJsApplication({
-				indexController: microbe.control.HomeController,
+        ufApp = new ClientJsApplication({
+            indexController: microbe.control.HomeController,
           
-				templatingEngines: [TemplatingEngines.haxe,TemplatingEngines.erazor],
-				defaultLayout: "microbe/microbeLayout.html",
-        requestMiddleware:[     
-       new middleware.SignalMiddleWare()],
-   responseMiddleware:[new middleware.SignalMiddleWare()],
+            templatingEngines: [TemplatingEngines.haxe,TemplatingEngines.erazor],
+            defaultLayout: "microbe/microbeLayout.html",
+            requestMiddleware:[     
+            new middleware.SignalMiddleWare()],
+            responseMiddleware:[new middleware.SignalMiddleWare()],
     
                 
                                
@@ -68,37 +78,39 @@ class App {
              
 
 
-			});
+        });
 
-            inject();
+        inject();
           
 			
-			ufApp.listen();
-
-      ufApp.configuration.clientActions.map(function(n)
-        untyped console.log(n));
+        ufApp.listen();
+        js.Browser.console.log(
+            haxe.macro.Compiler.getDefine("haxe_ver")
+            );
+        ufApp.configuration.clientActions.map(function(n)
+            untyped console.log(n));
 		  #end
-	}
+    }
 
 	#if server
-	static function run() 
+    static function run() 
     {
     	//trace(" run");
         //
     	#if sqlite
-      try{
+          try{
        
-        var cnx = sys.db.Sqlite.open("table.db");
+            var cnx = sys.db.Sqlite.open("table.db");
      
 
       
-        sys.db.Transaction.main(cnx, function () 
-        {
-           ufApp.executeRequest();
-        });
-      }catch(msg:Dynamic){
-        throw msg;
-      }
+            sys.db.Transaction.main(cnx, function () 
+                {
+                ufApp.executeRequest();
+            });
+        }catch(msg:Dynamic){
+            throw msg;
+        }
         
         #end
         
@@ -107,16 +119,16 @@ class App {
     }
     #end
     
-   static function inject(){
+    static function inject(){
 
     
-      var m:Array<Dynamic>=[microbe.model.Article,
-                              microbe.vo.FakeVo
+        var m:Array<Dynamic>=[microbe.model.Article,
+            microbe.vo.FakeVo
 
         ];
-      var models=m.map(function (n)return {name:Type.getClassName(n)} ).array();
-      ufApp.injector.map('Array<Dynamic>','models').toValue(models);
-       microbe.MicrobeInjector.inject(ufApp.injector);
+        var models=m.map(function (n)return {name:Type.getClassName(n)} ).array();
+        ufApp.injector.map('Array<Dynamic>','models').toValue(models);
+        microbe.MicrobeInjector.inject(ufApp.injector);
 
         
         ufApp.injector.map(String,"basePath").toValue("http://localhost:8888");
@@ -140,6 +152,8 @@ class App {
         // Execute the main request.
         
         ufApp.injector.map(ResponseSignal).asSingleton();
+        
+           
         
     }
     

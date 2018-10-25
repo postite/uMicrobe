@@ -1,4 +1,4 @@
---connect 7200
+#--connect 7200
 
 -lib erazor
 
@@ -16,7 +16,7 @@
 -debug
 -dce no
 -cp ./
---times
+#--times
 #--macro keep('StringBuf')
 #-D online
 #--connect 7200
@@ -31,6 +31,6 @@
 -cp src
 
 -main app.App
--D php7
+#-D php7
 -php www/
 #-neko www/index.n

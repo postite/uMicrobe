@@ -7,13 +7,13 @@
 -lib msignal
 -cp src/test
 -debug
-#-dce no
+#-dce full
 
 --times
 #--macro keep('StringBuf')
 #-D online
-
---connect 7200
+-lib hx3compat
+#--connect 7200
 -lib erazor
 -lib thx.unit
 -lib tink_core

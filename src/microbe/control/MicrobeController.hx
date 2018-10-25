@@ -1,13 +1,8 @@
 package microbe.control;
 import ufront.MVC;
 using ufront.core.AsyncTools;
-import microbe.comps.atoms.*;
-import microbe.comps.molecules.*;
-import microbe.comps.molecules.Login;
 import microbe.result.MicrobeResult;
 using tink.CoreApi;
-import microbe.macros.Parasite;
-import microbe.apis.*;
 using microbe.control.MicrobeController;
 import microbe.apis.MicrobialApi.MicrobialApiAsync;
 
@@ -52,26 +47,19 @@ class MicrobeController extends Controller {
 	
 	}
 	
-	public static function wrapInLayout( title:String, template:String, data:TemplateData ):ViewResult {
-		return new ViewResult( data )
-			.setVar( "title", title )
-			.usingTemplateString(
-				template,
-				CompileTime.readFile( "../www/view/microbe/microbeLayout.html" )
-			);
-	}
+	
 
 	@:route("/")
 	public function index()
 	{
 		ufTrace("indox"+models);
 		ViewResult.globalValues.set("items",[]);
-		
+		return new ViewResult({},"index");
 			//ufTrace(untyped a.formule);
-var template = CompileTime.readFile( "../www/view/microbe/index.html");
-return wrapInLayout("mic",template,{})
-	   // return new ViewResult({})
-	    .addPartialString("microbeFarm","hellomicrobe",ufront.view.TemplatingEngines.haxe);
+// var template = CompileTime.readFile( "../www/view/microbe/index.html");
+// return wrapInLayout("mic",template,{})
+// 	   // return new ViewResult({})
+// 	    .addPartialString("microbeFarm","hellomicrobe",ufront.view.TemplatingEngines.haxe);
 
 	}
 

@@ -39,14 +39,14 @@ class ModelFormGenerator {
 	 * @return void
 	 */
 	public function __construct ($formurl = "", $classes = null) {
-		#src/microbe/FormGenerator.hx:74: lines 74-79
+		#src/microbe/FormGenerator.hx:75: lines 75-80
 		if ($formurl === null) {
-			#src/microbe/FormGenerator.hx:74: lines 74-79
+			#src/microbe/FormGenerator.hx:75: lines 75-80
 			$formurl = "";
 		}
-		#src/microbe/FormGenerator.hx:75: characters 3-24
+		#src/microbe/FormGenerator.hx:76: characters 3-24
 		$this->formurl = $formurl;
-		#src/microbe/FormGenerator.hx:76: characters 3-45
+		#src/microbe/FormGenerator.hx:77: characters 3-45
 		$this->classes = ($classes !== null ? $classes : new \Array_hx());
 	}
 
@@ -57,18 +57,18 @@ class ModelFormGenerator {
 	 * @return string
 	 */
 	public function generate ($m) {
-		#src/microbe/FormGenerator.hx:87: characters 3-18
+		#src/microbe/FormGenerator.hx:88: characters 3-18
 		$m->setData($this->data);
-		#src/microbe/FormGenerator.hx:88: characters 3-28
+		#src/microbe/FormGenerator.hx:89: characters 3-28
 		$_this = $this->classes;
-		#src/microbe/FormGenerator.hx:88: characters 3-28
+		#src/microbe/FormGenerator.hx:89: characters 3-28
 		$_this->arr[$_this->length] = "pushstate";
-		#src/microbe/FormGenerator.hx:88: characters 3-28
+		#src/microbe/FormGenerator.hx:89: characters 3-28
 		++$_this->length;
 
-		#src/microbe/FormGenerator.hx:89: characters 3-27
+		#src/microbe/FormGenerator.hx:90: characters 3-27
 		$c = $this->classes->join(" ");
-		#src/microbe/FormGenerator.hx:91: lines 91-99
+		#src/microbe/FormGenerator.hx:92: lines 92-100
 		return "\x0A\x09\x09<style> input{\x0A\x09\x09\x09display:block;\x0A\x09\x09}\x0A\x09\x09</style>\x0A\x0A\x09\x09<form action=\"" . ($this->formurl??'null') . "\" class=\"" . ($c??'null') . "\"  method=\"POST\">\x0A\x09\x09" . ($m->render()??'null') . "\x0A\x09\x09</form>";
 	}
 
@@ -79,9 +79,9 @@ class ModelFormGenerator {
 	 * @return ModelFormGenerator
 	 */
 	public function setData ($d) {
-		#src/microbe/FormGenerator.hx:82: characters 3-14
-		$this->data = $d;
 		#src/microbe/FormGenerator.hx:83: characters 3-14
+		$this->data = $d;
+		#src/microbe/FormGenerator.hx:84: characters 3-14
 		return $this;
 	}
 }

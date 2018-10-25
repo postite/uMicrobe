@@ -31,36 +31,36 @@ class App {
 	 * @return void
 	 */
 	static public function inject () {
-		#src/test/app/App.hx:113: lines 113-116
+		#src/test/app/App.hx:125: lines 125-128
 		$m = \Array_hx::wrap([
 			Boot::getClass(Article::class),
 			Boot::getClass(FakeVo::class),
 		]);
-		#src/test/app/App.hx:117: characters 18-72
+		#src/test/app/App.hx:129: characters 20-74
 		$result = [];
-		#src/test/app/App.hx:117: characters 18-72
+		#src/test/app/App.hx:129: characters 20-74
 		$_g1 = 0;
-		#src/test/app/App.hx:117: characters 18-72
+		#src/test/app/App.hx:129: characters 20-74
 		$_g = $m->length;
-		#src/test/app/App.hx:117: characters 18-72
+		#src/test/app/App.hx:129: characters 20-74
 		while ($_g1 < $_g) {
-			#src/test/app/App.hx:117: characters 18-72
+			#src/test/app/App.hx:129: characters 20-74
 			$_g1 = $_g1 + 1;
-			#src/test/app/App.hx:117: characters 18-72
+			#src/test/app/App.hx:129: characters 20-74
 			$i = $_g1 - 1;
-			#src/test/app/App.hx:117: characters 18-72
+			#src/test/app/App.hx:129: characters 20-74
 			$result[] = new HxAnon(["name" => \Type::getClassName($m->arr[$i])]);
 		}
 
-		#src/test/app/App.hx:117: characters 7-81
+		#src/test/app/App.hx:129: characters 9-83
 		$models = \Lambda::array(\Array_hx::wrap($result));
-		#src/test/app/App.hx:118: characters 7-68
+		#src/test/app/App.hx:130: characters 9-70
 		App::$ufApp->injector->mapType("Array<Dynamic>", "models", null)->toValue($models);
-		#src/test/app/App.hx:119: characters 8-54
+		#src/test/app/App.hx:131: characters 9-55
 		MicrobeInjector::inject(App::$ufApp->injector);
-		#src/test/app/App.hx:122: characters 9-79
+		#src/test/app/App.hx:134: characters 9-79
 		App::$ufApp->injector->mapType("String", "basePath", null)->toValue("http://localhost:8888");
-		#src/test/app/App.hx:142: characters 9-57
+		#src/test/app/App.hx:154: characters 9-57
 		App::$ufApp->injector->mapType("middleware.ResponseSignal", null, null)->asSingleton();
 	}
 
@@ -69,9 +69,9 @@ class App {
 	 * @return void
 	 */
 	static public function main () {
-		#src/test/app/App.hx:38: characters 33-55
+		#src/test/app/App.hx:48: characters 33-55
 		$tmp = TemplatingEngines::get_haxe();
-		#src/test/app/App.hx:31: lines 31-44
+		#src/test/app/App.hx:41: lines 41-54
 		App::$ufApp = new UfrontApplication(new HxAnon([
 			"indexController" => Boot::getClass(HomeController::class),
 			"remotingApi" => Boot::getClass(Apis::class),
@@ -82,9 +82,9 @@ class App {
 			]),
 			"defaultLayout" => "microbe/microbeLayout.html",
 		]));
-		#src/test/app/App.hx:48: characters 9-17
+		#src/test/app/App.hx:58: characters 9-17
 		App::inject();
-		#src/test/app/App.hx:52: characters 9-14
+		#src/test/app/App.hx:62: characters 9-14
 		App::run();
 	}
 
@@ -93,20 +93,20 @@ class App {
 	 * @return void
 	 */
 	static public function run () {
-		#src/test/app/App.hx:89: lines 89-101
+		#src/test/app/App.hx:101: lines 101-113
 		try {
-			#src/test/app/App.hx:91: characters 9-50
+			#src/test/app/App.hx:103: characters 13-54
 			$cnx = Sqlite::open("table.db");
-			#src/test/app/App.hx:95: lines 95-98
+			#src/test/app/App.hx:107: lines 107-110
 			Transaction::main($cnx, function () {
-				#src/test/app/App.hx:97: characters 12-34
+				#src/test/app/App.hx:109: characters 17-39
 				App::$ufApp->executeRequest();
 			});
 		} catch (\Throwable $__hx__caught_e) {
 			CallStack::saveExceptionTrace($__hx__caught_e);
 			$__hx__real_e = ($__hx__caught_e instanceof HxException ? $__hx__caught_e->e : $__hx__caught_e);
 			$msg = $__hx__real_e;
-			#src/test/app/App.hx:100: characters 9-14
+			#src/test/app/App.hx:112: characters 13-18
 			throw (is_object($__hx__throw = $msg) && $__hx__throw instanceof \Throwable ? $__hx__throw : new HxException($__hx__throw));
 		}
 	}
@@ -116,10 +116,10 @@ class App {
 	 * @return void
 	 */
 	public function __construct () {
-		#src/test/app/App.hx:21: characters 3-8
-		(Log::$trace)("yoo", new HxAnon([
+		#src/test/app/App.hx:20: characters 9-14
+		(Log::$trace)("yoooo", new HxAnon([
 			"fileName" => "src/test/app/App.hx",
-			"lineNumber" => 21,
+			"lineNumber" => 20,
 			"className" => "app.App",
 			"methodName" => "new",
 		]));

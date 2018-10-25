@@ -23,7 +23,7 @@ class HomeController extends Controller {
 
 
 	/**
-	 * @var MicrobeController
+	 * @var MicrobeCompileController
 	 */
 	public $mic;
 
@@ -32,7 +32,7 @@ class HomeController extends Controller {
 	 * @return void
 	 */
 	public function __construct () {
-		#src/microbe/control/HomeController.hx:9: lines 9-23
+		#src/microbe/control/HomeController.hx:7: lines 7-21
 		parent::__construct();
 	}
 
@@ -41,58 +41,58 @@ class HomeController extends Controller {
 	 * @return FutureObject
 	 */
 	public function execute () {
-		#src/microbe/control/HomeController.hx:9: lines 9-23
+		#src/microbe/control/HomeController.hx:7: lines 7-21
 		$uriParts = $this->context->actionContext->get_uriParts();
-		#src/microbe/control/HomeController.hx:9: lines 9-23
+		#src/microbe/control/HomeController.hx:7: lines 7-21
 		$params = $this->context->request->get_params();
-		#src/microbe/control/HomeController.hx:9: lines 9-23
+		#src/microbe/control/HomeController.hx:7: lines 7-21
 		$method = $this->context->request->get_httpMethod();
-		#src/microbe/control/HomeController.hx:9: lines 9-23
+		#src/microbe/control/HomeController.hx:7: lines 7-21
 		$this->context->actionContext->controller = $this;
-		#src/microbe/control/HomeController.hx:9: lines 9-23
+		#src/microbe/control/HomeController.hx:7: lines 7-21
 		$this->context->actionContext->action = "execute";
-		#src/microbe/control/HomeController.hx:9: lines 9-23
+		#src/microbe/control/HomeController.hx:7: lines 7-21
 		try {
 			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/web/ControllerMacros.hx:511: characters 28-65
 			if (0 === $uriParts->length) {
-				#src/microbe/control/HomeController.hx:12: lines 12-19
+				#src/microbe/control/HomeController.hx:10: lines 10-17
 				$this->context->actionContext->action = "index";
-				#src/microbe/control/HomeController.hx:12: lines 12-19
+				#src/microbe/control/HomeController.hx:10: lines 10-17
 				$this->context->actionContext->args = new \Array_hx();
-				#src/microbe/control/HomeController.hx:12: lines 12-19
+				#src/microbe/control/HomeController.hx:10: lines 10-17
 				$this->context->actionContext->get_uriParts()->splice(0, 0);
-				#src/microbe/control/HomeController.hx:12: lines 12-19
+				#src/microbe/control/HomeController.hx:10: lines 10-17
 				$this1 = (Boot::dynamicField(Boot::dynamicField(Meta::getFields(Boot::getClass(HomeController::class)), 'index'), 'wrapResult')->arr[0] ?? null);
-				#src/microbe/control/HomeController.hx:12: lines 12-19
+				#src/microbe/control/HomeController.hx:10: lines 10-17
 				$wrappingRequired = $this1;
-				#src/microbe/control/HomeController.hx:12: lines 12-19
+				#src/microbe/control/HomeController.hx:10: lines 10-17
 				$result = $this->wrapResult($this->index(), $wrappingRequired);
-				#src/microbe/control/HomeController.hx:12: lines 12-19
+				#src/microbe/control/HomeController.hx:10: lines 10-17
 				$this->setContextActionResultWhenFinished($result);
-				#src/microbe/control/HomeController.hx:12: lines 12-19
+				#src/microbe/control/HomeController.hx:10: lines 10-17
 				return $result;
 			} else if ((1 <= $uriParts->length) && (($uriParts->arr[0] ?? null) === "microbe")) {
-				#src/microbe/control/HomeController.hx:21: characters 8-34
+				#src/microbe/control/HomeController.hx:19: characters 8-41
 				$this->context->actionContext->action = "execute_mic";
-				#src/microbe/control/HomeController.hx:21: characters 8-34
+				#src/microbe/control/HomeController.hx:19: characters 8-41
 				$this->context->actionContext->args = new \Array_hx();
-				#src/microbe/control/HomeController.hx:21: characters 8-34
+				#src/microbe/control/HomeController.hx:19: characters 8-41
 				$this->context->actionContext->get_uriParts()->splice(0, 1);
-				#src/microbe/control/HomeController.hx:21: characters 8-34
+				#src/microbe/control/HomeController.hx:19: characters 8-41
 				$this11 = (Boot::dynamicField(Boot::dynamicField(Meta::getFields(Boot::getClass(HomeController::class)), 'execute_mic'), 'wrapResult')->arr[0] ?? null);
-				#src/microbe/control/HomeController.hx:21: characters 8-34
+				#src/microbe/control/HomeController.hx:19: characters 8-41
 				$wrappingRequired1 = $this11;
-				#src/microbe/control/HomeController.hx:21: characters 8-34
+				#src/microbe/control/HomeController.hx:19: characters 8-41
 				$result1 = $this->wrapResult($this->execute_mic(), $wrappingRequired1);
-				#src/microbe/control/HomeController.hx:21: characters 8-34
+				#src/microbe/control/HomeController.hx:19: characters 8-41
 				$this->setContextActionResultWhenFinished($result1);
-				#src/microbe/control/HomeController.hx:21: characters 8-34
+				#src/microbe/control/HomeController.hx:19: characters 8-41
 				return $result1;
 			}
-			#src/microbe/control/HomeController.hx:9: lines 9-23
+			#src/microbe/control/HomeController.hx:7: lines 7-21
 			throw new HxException(HttpError::pageNotFound(new HxAnon([
 				"fileName" => "src/microbe/control/HomeController.hx",
-				"lineNumber" => 9,
+				"lineNumber" => 7,
 				"className" => "microbe.control.HomeController",
 				"methodName" => "execute",
 			])));
@@ -100,10 +100,10 @@ class HomeController extends Controller {
 			CallStack::saveExceptionTrace($__hx__caught_e);
 			$__hx__real_e = ($__hx__caught_e instanceof HxException ? $__hx__caught_e->e : $__hx__caught_e);
 			$e = $__hx__real_e;
-			#src/microbe/control/HomeController.hx:9: lines 9-23
+			#src/microbe/control/HomeController.hx:7: lines 7-21
 			return SurpriseTools::asSurpriseError($e, "Uncaught error while executing " . (\Std::string($this->context->actionContext->controller)??'null') . "." . ($this->context->actionContext->action??'null') . "()", new HxAnon([
 				"fileName" => "src/microbe/control/HomeController.hx",
-				"lineNumber" => 9,
+				"lineNumber" => 7,
 				"className" => "microbe.control.HomeController",
 				"methodName" => "execute",
 			]));
@@ -115,8 +115,8 @@ class HomeController extends Controller {
 	 * @return FutureObject
 	 */
 	public function execute_mic () {
-		#src/microbe/control/HomeController.hx:21: characters 8-34
-		return $this->context->injector->_instantiate(Boot::getClass(MicrobeController::class))->execute();
+		#src/microbe/control/HomeController.hx:19: characters 8-41
+		return $this->context->injector->_instantiate(Boot::getClass(MicrobeCompileController::class))->execute();
 	}
 
 
@@ -124,31 +124,31 @@ class HomeController extends Controller {
 	 * @return RedirectResult
 	 */
 	public function index () {
-		#src/microbe/control/HomeController.hx:14: characters 5-20
+		#src/microbe/control/HomeController.hx:12: characters 5-20
 		$pos = new HxAnon([
 			"fileName" => "src/microbe/control/HomeController.hx",
-			"lineNumber" => 14,
+			"lineNumber" => 12,
 			"className" => "microbe.control.HomeController",
 			"methodName" => "index",
 		]);
-		#src/microbe/control/HomeController.hx:14: characters 5-20
+		#src/microbe/control/HomeController.hx:12: characters 5-20
 		if ($this->context !== null) {
-			#src/microbe/control/HomeController.hx:14: characters 5-20
+			#src/microbe/control/HomeController.hx:12: characters 5-20
 			$_this = $this->context->messages;
-			#src/microbe/control/HomeController.hx:14: characters 5-20
+			#src/microbe/control/HomeController.hx:12: characters 5-20
 			$_this->arr[$_this->length] = new HxAnon([
 				"msg" => "yuzu",
 				"pos" => $pos,
 				"type" => MessageType::MTrace(),
 			]);
-			#src/microbe/control/HomeController.hx:14: characters 5-20
+			#src/microbe/control/HomeController.hx:12: characters 5-20
 			++$_this->length;
 		} else {
-			#src/microbe/control/HomeController.hx:14: characters 5-20
+			#src/microbe/control/HomeController.hx:12: characters 5-20
 			(Log::$trace)("yuzu", $pos);
 		}
 
-		#src/microbe/control/HomeController.hx:18: characters 5-42
+		#src/microbe/control/HomeController.hx:16: characters 5-42
 		return new RedirectResult("/microbe");
 	}
 

@@ -659,7 +659,9 @@ Type.enumEq = function(a,b) {
 	return true;
 };
 var app_App = function() {
-	haxe_Log.trace("yoo",{ fileName : "src/test/app/App.hx", lineNumber : 21, className : "app.App", methodName : "new"});
+	haxe_Log.trace("yoooo",{ fileName : "src/test/app/App.hx", lineNumber : 20, className : "app.App", methodName : "new"});
+	window.console.log("haxe-ver");
+	window.console.log("4.000");
 };
 $hxClasses["app.App"] = app_App;
 app_App.__name__ = ["app","App"];
@@ -667,6 +669,7 @@ app_App.main = function() {
 	app_App.ufApp = new ufront_app_ClientJsApplication({ indexController : microbe_control_HomeController, templatingEngines : [ufront_view_TemplatingEngines.get_haxe(),ufront_view_TemplatingEngines.get_erazor()], defaultLayout : "microbe/microbeLayout.html", requestMiddleware : [new middleware_SignalMiddleWare()], responseMiddleware : [new middleware_SignalMiddleWare()]});
 	app_App.inject();
 	app_App.ufApp.listen();
+	window.console.log("4.000");
 	Lambda.map(app_App.ufApp.configuration.clientActions,function(n) {
 		console.log(n);
 	});
@@ -5089,6 +5092,11 @@ var haxe_remoting_Context = function() {
 };
 $hxClasses["haxe.remoting.Context"] = haxe_remoting_Context;
 haxe_remoting_Context.__name__ = ["haxe","remoting","Context"];
+haxe_remoting_Context.share = function(name,obj) {
+	var ctx = new haxe_remoting_Context();
+	ctx.addObject(name,obj);
+	return ctx;
+};
 haxe_remoting_Context.prototype = {
 	objects: null
 	,addObject: function(name,obj,recursive) {
@@ -5138,6 +5146,11 @@ var haxe_remoting_HttpAsyncConnection = function(data,path) {
 $hxClasses["haxe.remoting.HttpAsyncConnection"] = haxe_remoting_HttpAsyncConnection;
 haxe_remoting_HttpAsyncConnection.__name__ = ["haxe","remoting","HttpAsyncConnection"];
 haxe_remoting_HttpAsyncConnection.__interfaces__ = [haxe_remoting_AsyncConnection];
+haxe_remoting_HttpAsyncConnection.urlConnect = function(url) {
+	return new haxe_remoting_HttpAsyncConnection({ url : url, error : function(e) {
+		throw js__$Boot_HaxeError.wrap(e);
+	}},[]);
+};
 haxe_remoting_HttpAsyncConnection.prototype = {
 	__data: null
 	,__path: null
@@ -5188,6 +5201,26 @@ var haxe_remoting_HttpConnection = function(url,path) {
 $hxClasses["haxe.remoting.HttpConnection"] = haxe_remoting_HttpConnection;
 haxe_remoting_HttpConnection.__name__ = ["haxe","remoting","HttpConnection"];
 haxe_remoting_HttpConnection.__interfaces__ = [haxe_remoting_Connection];
+haxe_remoting_HttpConnection.urlConnect = function(url) {
+	return new haxe_remoting_HttpConnection(url,[]);
+};
+haxe_remoting_HttpConnection.processRequest = function(requestData,ctx) {
+	try {
+		var u = new haxe_Unserializer(requestData);
+		var path = u.unserialize();
+		var args = u.unserialize();
+		var data = ctx.call(path,args);
+		var s = new haxe_Serializer();
+		s.serialize(data);
+		return "hxr" + s.toString();
+	} catch( e ) {
+		haxe_CallStack.lastException = e;
+		var e1 = (e instanceof js__$Boot_HaxeError) ? e.val : e;
+		var s1 = new haxe_Serializer();
+		s1.serializeException(e1);
+		return "hxr" + s1.toString();
+	}
+};
 haxe_remoting_HttpConnection.prototype = {
 	__url: null
 	,__path: null
@@ -9911,9 +9944,25 @@ microbe_comps_molecules_UpComp.prototype = $extend(microbe_comps_Molecule.protot
 	}
 	,__class__: microbe_comps_molecules_UpComp
 });
+var microbe_comps_wrappers_Status = $hxClasses["microbe.comps.wrappers.Status"] = { __ename__ : ["microbe","comps","wrappers","Status"], __constructs__ : ["None","Render","Exec","Rec","Abort"] };
+microbe_comps_wrappers_Status.None = ["None",0];
+microbe_comps_wrappers_Status.None.toString = $estr;
+microbe_comps_wrappers_Status.None.__enum__ = microbe_comps_wrappers_Status;
+microbe_comps_wrappers_Status.Render = ["Render",1];
+microbe_comps_wrappers_Status.Render.toString = $estr;
+microbe_comps_wrappers_Status.Render.__enum__ = microbe_comps_wrappers_Status;
+microbe_comps_wrappers_Status.Exec = ["Exec",2];
+microbe_comps_wrappers_Status.Exec.toString = $estr;
+microbe_comps_wrappers_Status.Exec.__enum__ = microbe_comps_wrappers_Status;
+microbe_comps_wrappers_Status.Rec = function(id) { var $x = ["Rec",3,id]; $x.__enum__ = microbe_comps_wrappers_Status; $x.toString = $estr; return $x; };
+microbe_comps_wrappers_Status.Abort = ["Abort",4];
+microbe_comps_wrappers_Status.Abort.toString = $estr;
+microbe_comps_wrappers_Status.Abort.__enum__ = microbe_comps_wrappers_Status;
 var microbe_comps_wrappers_FormuleWrapper = function(d,name,classes) {
 	this.valide = false;
 	microbe_comps_Wrapper.call(this,d,name,classes);
+	this.status = new msignal_Signal1();
+	this.status.dispatch(microbe_comps_wrappers_Status.None);
 };
 $hxClasses["microbe.comps.wrappers.FormuleWrapper"] = microbe_comps_wrappers_FormuleWrapper;
 microbe_comps_wrappers_FormuleWrapper.__name__ = ["microbe","comps","wrappers","FormuleWrapper"];
@@ -9928,6 +9977,7 @@ microbe_comps_wrappers_FormuleWrapper.prototype = $extend(microbe_comps_Wrapper.
 	,ctx: null
 	,okButton: null
 	,deleteButton: null
+	,status: null
 	,render: function() {
 		this.mics = [];
 		var buf_b = "";
@@ -9951,6 +10001,7 @@ microbe_comps_wrappers_FormuleWrapper.prototype = $extend(microbe_comps_Wrapper.
 		this.deleteButton = new microbe_comps_atoms_NopeButton({ v : "efface", type : "button", n : "submit"},null,["delbutt"]);
 		buf_b += Std.string(this.deleteButton.render());
 		buf_b += "</div>";
+		this.status.dispatch(microbe_comps_wrappers_Status.Render);
 		return buf_b;
 	}
 	,execute: function(ctx) {
@@ -9996,6 +10047,7 @@ microbe_comps_wrappers_FormuleWrapper.prototype = $extend(microbe_comps_Wrapper.
 			_gthis["delete"]();
 			e1.preventDefault();
 		});
+		this.status.dispatch(microbe_comps_wrappers_Status.Exec);
 	}
 	,valide: null
 	,gatherData: function() {
@@ -10021,10 +10073,12 @@ microbe_comps_wrappers_FormuleWrapper.prototype = $extend(microbe_comps_Wrapper.
 					_gthis.validateComps(tmp);
 					_gthis.valide = true;
 					_gthis.okButton.stateGood();
+					_gthis.status.dispatch(microbe_comps_wrappers_Status.Rec(s));
 					console.log("recorded");
 					break;
 				case 1:
 					var er = o[2];
+					_gthis.status.dispatch(microbe_comps_wrappers_Status.Abort);
 					var _g = er.data;
 					switch(_g[1]) {
 					case 0:
@@ -10194,7 +10248,7 @@ microbe_control_HomeController.__name__ = ["microbe","control","HomeController"]
 microbe_control_HomeController.__super__ = ufront_web_Controller;
 microbe_control_HomeController.prototype = $extend(ufront_web_Controller.prototype,{
 	index: function() {
-		var pos = { fileName : "src/microbe/control/HomeController.hx", lineNumber : 14, className : "microbe.control.HomeController", methodName : "index"};
+		var pos = { fileName : "src/microbe/control/HomeController.hx", lineNumber : 12, className : "microbe.control.HomeController", methodName : "index"};
 		if(this.context != null) {
 			this.context.messages.push({ msg : "yuzu", pos : pos, type : ufront_log_MessageType.MTrace});
 		} else {
@@ -10204,7 +10258,7 @@ microbe_control_HomeController.prototype = $extend(ufront_web_Controller.prototy
 	}
 	,mic: null
 	,execute_mic: function() {
-		return this.context.injector._instantiate(microbe_control_MicrobeController).execute();
+		return this.context.injector._instantiate(microbe_control_MicrobeCompileController).execute();
 	}
 	,execute: function() {
 		var uriParts = this.context.actionContext.get_uriParts();
@@ -10232,24 +10286,331 @@ microbe_control_HomeController.prototype = $extend(ufront_web_Controller.prototy
 				this.setContextActionResultWhenFinished(result1);
 				return result1;
 			}
-			throw new js__$Boot_HaxeError(ufront_web_HttpError.pageNotFound({ fileName : "src/microbe/control/HomeController.hx", lineNumber : 9, className : "microbe.control.HomeController", methodName : "execute"}));
+			throw new js__$Boot_HaxeError(ufront_web_HttpError.pageNotFound({ fileName : "src/microbe/control/HomeController.hx", lineNumber : 7, className : "microbe.control.HomeController", methodName : "execute"}));
 		} catch( e ) {
 			haxe_CallStack.lastException = e;
-			return ufront_core_SurpriseTools.asSurpriseError((e instanceof js__$Boot_HaxeError) ? e.val : e,"Uncaught error while executing " + Std.string(this.context.actionContext.controller) + "." + this.context.actionContext.action + "()",{ fileName : "src/microbe/control/HomeController.hx", lineNumber : 9, className : "microbe.control.HomeController", methodName : "execute"});
+			return ufront_core_SurpriseTools.asSurpriseError((e instanceof js__$Boot_HaxeError) ? e.val : e,"Uncaught error while executing " + Std.string(this.context.actionContext.controller) + "." + this.context.actionContext.action + "()",{ fileName : "src/microbe/control/HomeController.hx", lineNumber : 7, className : "microbe.control.HomeController", methodName : "execute"});
 		}
 	}
 	,__class__: microbe_control_HomeController
+});
+var microbe_control_MicrobeCompileController = function() {
+	ufront_web_Controller.call(this);
+};
+$hxClasses["microbe.control.MicrobeCompileController"] = microbe_control_MicrobeCompileController;
+microbe_control_MicrobeCompileController.__name__ = ["microbe","control","MicrobeCompileController"];
+microbe_control_MicrobeCompileController.asPromise = function(surp) {
+	return surp;
+};
+microbe_control_MicrobeCompileController.__super__ = ufront_web_Controller;
+microbe_control_MicrobeCompileController.prototype = $extend(ufront_web_Controller.prototype,{
+	microbeApi: null
+	,models: null
+	,micPath: null
+	,init: function() {
+		ufront_view__$TemplateData_TemplateData_$Impl_$.set(ufront_web_result_ViewResult.globalValues,"mods",this.models);
+		ufront_view__$TemplateData_TemplateData_$Impl_$.set(ufront_web_result_ViewResult.globalValues,"micPath",this.micPath);
+		var this1 = ufront_web_result_ViewResult.globalHelpers;
+		var value = ufront_view__$TemplateHelper_TemplateHelper_$Impl_$.from1(function(n) {
+			return "";
+		});
+		var _this = this1;
+		if(__map_reserved["microbeFarm"] != null) {
+			_this.setReserved("microbeFarm",value);
+		} else {
+			_this.h["microbeFarm"] = value;
+		}
+		var this11 = ufront_web_result_ViewResult.globalPartials;
+		var value1 = ufront_web_result_TemplateSource.TFromString("<div id=\"volist\">\n\t::foreach mods::\n\t<li>\n\t<a href=\"/::micPath::/mods/list/::name::\" rel=\"pushstate\">\n\t\t::name::\n\t\t</a>\n\t\t</li>\n\t::end::\n</div>",ufront_view_TemplatingEngines.get_haxe());
+		var _this1 = this11;
+		if(__map_reserved["voList"] != null) {
+			_this1.setReserved("voList",value1);
+		} else {
+			_this1.h["voList"] = value1;
+		}
+		var this12 = ufront_web_result_ViewResult.globalPartials;
+		var value2 = ufront_web_result_TemplateSource.TFromString("<div id=\"items\">\n\t::foreach items::\n\t<div>\t\n\t\t<a href=\"/::micPath::/affiche/::mod::/mod/::id::\" rel=\"pushstate\">::titre::</a>\n\t</div>\t\n\t::end::\n<div>\t\n\t::if mod::\n\t<a href=\"/::micPath::/mods/plus/::mod::\" rel=\"pushstate\">plus</a>\n\t::end::\n</div>\n</div>",ufront_view_TemplatingEngines.get_haxe());
+		var _this2 = this12;
+		if(__map_reserved["items"] != null) {
+			_this2.setReserved("items",value2);
+		} else {
+			_this2.h["items"] = value2;
+		}
+		var this13 = ufront_web_result_ViewResult.globalPartials;
+		var value3 = ufront_web_result_TemplateSource.TFromString("<div>$$microbeFarm()</div>",ufront_view_TemplatingEngines.get_haxe());
+		var _this3 = this13;
+		if(__map_reserved["form"] != null) {
+			_this3.setReserved("form",value3);
+		} else {
+			_this3.h["form"] = value3;
+		}
+	}
+	,index: function() {
+		var msg = "indox" + Std.string(this.models);
+		var pos = { fileName : "src/microbe/control/MicrobeCompileController.hx", lineNumber : 59, className : "microbe.control.MicrobeCompileController", methodName : "index"};
+		if(this.context != null) {
+			this.context.messages.push({ msg : msg, pos : pos, type : ufront_log_MessageType.MTrace});
+		} else {
+			haxe_Log.trace("" + Std.string(msg),pos);
+		}
+		ufront_view__$TemplateData_TemplateData_$Impl_$.set(ufront_web_result_ViewResult.globalValues,"items",[]);
+		var template = "<header><h1>Microbe Admin</h1>\n<a href=\"/::micPath::\" rel=\"pushstate\">⦿</a>\n</header>\n<div class=\"mic-walker\">\n\t<div class=\"mic-walk\" data-uf-partial=\"volist\">$$voList()</div>\n\t<div class=\"mic-walk\" data-uf-partial=\"items\">$$items()</div>\n\t<div class=\"mic-walk\" data-uf-partial=\"form\">$$form()</div>\n</div>";
+		var obj = { };
+		var this1 = obj != null ? obj : { };
+		return microbe_views_ViewTools.wrapInLayout("mic",template,ufront_view__$TemplateData_TemplateData_$Impl_$.setObject(this1,{ })).addPartialString("microbeFarm","hellomicrobe",ufront_view_TemplatingEngines.get_haxe());
+	}
+	,mods: function(name) {
+		var _gthis = this;
+		var f = function(n) {
+			var pos = { fileName : "src/microbe/control/MicrobeCompileController.hx", lineNumber : 88, className : "microbe.control.MicrobeCompileController", methodName : "mods"};
+			if(_gthis.context != null) {
+				_gthis.context.messages.push({ msg : "mods", pos : pos, type : ufront_log_MessageType.MLog});
+			} else {
+				haxe_Log.trace("Log: " + "mods",pos);
+			}
+			return new tink_core__$Future_SyncFuture(new tink_core__$Lazy_LazyConst(new ufront_web_result_ContentResult("ret" + Std.string(n))));
+		};
+		var ret = tink_core__$Promise_Promise_$Impl_$.next(this.microbeApi.getAllModels(name),function(items) {
+			var msg = "back" + Std.string(items) + name;
+			var pos1 = { fileName : "src/microbe/control/MicrobeCompileController.hx", lineNumber : 75, className : "microbe.control.MicrobeCompileController", methodName : "mods"};
+			if(_gthis.context != null) {
+				_gthis.context.messages.push({ msg : msg, pos : pos1, type : ufront_log_MessageType.MLog});
+			} else {
+				haxe_Log.trace("Log: " + Std.string(msg),pos1);
+			}
+			ufront_view__$TemplateData_TemplateData_$Impl_$.set(ufront_web_result_ViewResult.globalValues,"items",items);
+			ufront_view__$TemplateData_TemplateData_$Impl_$.set(ufront_web_result_ViewResult.globalValues,"mod",name);
+			var msg1 = "bock" + Std.string(items) + name;
+			var pos2 = { fileName : "src/microbe/control/MicrobeCompileController.hx", lineNumber : 79, className : "microbe.control.MicrobeCompileController", methodName : "mods"};
+			if(_gthis.context != null) {
+				_gthis.context.messages.push({ msg : msg1, pos : pos2, type : ufront_log_MessageType.MLog});
+			} else {
+				haxe_Log.trace("Log: " + Std.string(msg1),pos2);
+			}
+			var template = "<header><h1>Microbe Admin</h1>\n<a href=\"/::micPath::\" rel=\"pushstate\">⦿</a>\n</header>\n<div class=\"mic-walker\">\n\t<div class=\"mic-walk\" data-uf-partial=\"volist\">$$voList()</div>\n\t<div class=\"mic-walk\" data-uf-partial=\"items\">$$items()</div>\n\t<div class=\"mic-walk\" data-uf-partial=\"form\">$$form()</div>\n</div>";
+			var obj = { };
+			var this1 = obj != null ? obj : { };
+			return tink_core__$Promise_Promise_$Impl_$.ofOutcome(tink_core_Outcome.Success(microbe_views_ViewTools.wrapInLayout("mic",template,ufront_view__$TemplateData_TemplateData_$Impl_$.setObject(this1,{ mod : name, items : items}))));
+		}).flatMap(function(o) {
+			switch(o[1]) {
+			case 0:
+				var d = o[2];
+				return new tink_core__$Future_SyncFuture(new tink_core__$Lazy_LazyConst(d));
+			case 1:
+				var e = o[2];
+				return f(e);
+			}
+		});
+		return ret.gather();
+	}
+	,plus: function(name) {
+		return this.insert(name);
+	}
+	,insert: function(mod) {
+		var _gthis = this;
+		var f = function(n) {
+			return new tink_core__$Future_SyncFuture(new tink_core__$Lazy_LazyConst(new ufront_web_result_ContentResult(Std.string("erreur" + Std.string(n)))));
+		};
+		var ret = tink_core__$Promise_Promise_$Impl_$.next(tink_core__$Promise_Promise_$Impl_$.next(this.microbeApi.getFormuleFromString(mod),function(formule) {
+			var api = _gthis.microbeApi;
+			haxe_Log.trace("reloadGlobalVars",{ fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 178, className : "microbe.control.MicrobeController", methodName : "reloadGlobalVars"});
+			var this1;
+			if(Reflect.field(ufront_web_result_ViewResult.globalValues,"items") == null) {
+				this1 = tink_core__$Promise_Promise_$Impl_$.next(api.getAllModels(mod),function(items) {
+					ufront_view__$TemplateData_TemplateData_$Impl_$.set(ufront_web_result_ViewResult.globalValues,"items",items);
+					return tink_core__$Promise_Promise_$Impl_$.ofOutcome(tink_core_Outcome.Success(items));
+				});
+			} else {
+				ufront_view__$TemplateData_TemplateData_$Impl_$.set(ufront_web_result_ViewResult.globalValues,"mod",mod);
+				this1 = new tink_core__$Future_SyncFuture(new tink_core__$Lazy_LazyConst(tink_core_Outcome.Success(Reflect.field(ufront_web_result_ViewResult.globalValues,"items"))));
+			}
+			return tink_core__$Promise_Promise_$Impl_$.next(this1,function(items1) {
+				return tink_core__$Promise_Promise_$Impl_$.ofOutcome(tink_core_Outcome.Success(formule));
+			});
+		}),function(formule1) {
+			var msg = "items=>>>" + Std.string(Reflect.field(ufront_web_result_ViewResult.globalValues,"items"));
+			var pos = { fileName : "src/microbe/control/MicrobeCompileController.hx", lineNumber : 121, className : "microbe.control.MicrobeCompileController", methodName : "insert"};
+			if(_gthis.context != null) {
+				_gthis.context.messages.push({ msg : msg, pos : pos, type : ufront_log_MessageType.MTrace});
+			} else {
+				haxe_Log.trace("" + Std.string(msg),pos);
+			}
+			var wrap = new microbe_comps_wrappers_FormuleWrapper(formule1);
+			wrap.status.add(function(s) {
+				console.log("status=" + Std.string(s));
+				switch(s[1]) {
+				case 3:
+					var id = s[2];
+					ufront_view__$TemplateData_TemplateData_$Impl_$.set(ufront_web_result_ViewResult.globalValues,"items",null);
+					return pushstate_PushState.push("/microbe/affiche/" + mod + "/mod/" + id);
+				case 4:
+					throw new js__$Boot_HaxeError(new tink_core_TypedError(null,"bam",{ fileName : "src/microbe/control/MicrobeCompileController.hx", lineNumber : 129, className : "microbe.control.MicrobeCompileController", methodName : "insert"}));
+				default:
+					return console.log("status=" + Std.string(s));
+				}
+			});
+			return tink_core__$Promise_Promise_$Impl_$.ofOutcome(tink_core_Outcome.Success(microbe_result__$MicrobeResult_MicrobeModelCompileResult_$Impl_$._new(mod,wrap,"")));
+		}).flatMap(function(o) {
+			switch(o[1]) {
+			case 0:
+				var d = o[2];
+				return new tink_core__$Future_SyncFuture(new tink_core__$Lazy_LazyConst(d));
+			case 1:
+				var e = o[2];
+				return f(e);
+			}
+		});
+		return ret.gather();
+	}
+	,update: function(mod,id) {
+		var _gthis = this;
+		var f = function(err) {
+			return new tink_core__$Future_SyncFuture(new tink_core__$Lazy_LazyConst(new ufront_web_result_ContentResult(Std.string(err))));
+		};
+		var ret = tink_core__$Promise_Promise_$Impl_$.next(tink_core__$Promise_Promise_$Impl_$.next(this.microbeApi.getDataFormule(mod,id),function(formule) {
+			var api = _gthis.microbeApi;
+			haxe_Log.trace("reloadGlobalVars",{ fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 178, className : "microbe.control.MicrobeController", methodName : "reloadGlobalVars"});
+			var this1;
+			if(Reflect.field(ufront_web_result_ViewResult.globalValues,"items") == null) {
+				this1 = tink_core__$Promise_Promise_$Impl_$.next(api.getAllModels(mod),function(items) {
+					ufront_view__$TemplateData_TemplateData_$Impl_$.set(ufront_web_result_ViewResult.globalValues,"items",items);
+					return tink_core__$Promise_Promise_$Impl_$.ofOutcome(tink_core_Outcome.Success(items));
+				});
+			} else {
+				ufront_view__$TemplateData_TemplateData_$Impl_$.set(ufront_web_result_ViewResult.globalValues,"mod",mod);
+				this1 = new tink_core__$Future_SyncFuture(new tink_core__$Lazy_LazyConst(tink_core_Outcome.Success(Reflect.field(ufront_web_result_ViewResult.globalValues,"items"))));
+			}
+			return tink_core__$Promise_Promise_$Impl_$.next(this1,function(items1) {
+				return tink_core__$Promise_Promise_$Impl_$.ofOutcome(tink_core_Outcome.Success(formule));
+			});
+		}),function(formule1) {
+			var msg = "items=>>>" + Std.string(Reflect.field(ufront_web_result_ViewResult.globalValues,"items"));
+			var pos = { fileName : "src/microbe/control/MicrobeCompileController.hx", lineNumber : 155, className : "microbe.control.MicrobeCompileController", methodName : "update"};
+			if(_gthis.context != null) {
+				_gthis.context.messages.push({ msg : msg, pos : pos, type : ufront_log_MessageType.MTrace});
+			} else {
+				haxe_Log.trace("" + Std.string(msg),pos);
+			}
+			ufront_view__$TemplateData_TemplateData_$Impl_$.set(ufront_web_result_ViewResult.globalValues,"mod",mod);
+			return tink_core__$Promise_Promise_$Impl_$.ofOutcome(tink_core_Outcome.Success(microbe_result__$MicrobeResult_MicrobeModelCompileResult_$Impl_$._new(mod,new microbe_comps_wrappers_FormuleWrapper(formule1),"")));
+		}).flatMap(function(o) {
+			switch(o[1]) {
+			case 0:
+				var d = o[2];
+				return new tink_core__$Future_SyncFuture(new tink_core__$Lazy_LazyConst(d));
+			case 1:
+				var e = o[2];
+				return f(e);
+			}
+		});
+		return ret.gather();
+	}
+	,setup: function(mod) {
+		var ret = tink_core__$Promise_Promise_$Impl_$.next(this.microbeApi.setupTable(mod),function(l) {
+			return tink_core__$Promise_Promise_$Impl_$.ofOutcome(tink_core_Outcome.Success(new ufront_web_result_ContentResult("ok table créée")));
+		}).flatMap(function(o) {
+			switch(o[1]) {
+			case 0:
+				var d = o[2];
+				return new tink_core__$Future_SyncFuture(new tink_core__$Lazy_LazyConst(d));
+			case 1:
+				var e = o[2];
+				return null;
+			}
+		});
+		return ret.gather();
+	}
+	,execute: function() {
+		var uriParts = this.context.actionContext.get_uriParts();
+		var params = this.context.request.get_params();
+		var method = this.context.request.get_httpMethod();
+		this.context.actionContext.controller = this;
+		this.context.actionContext.action = "execute";
+		try {
+			if(0 == uriParts.length) {
+				this.context.actionContext.action = "index";
+				this.context.actionContext.args = [];
+				this.context.actionContext.get_uriParts().splice(0,0);
+				var this1 = haxe_rtti_Meta.getFields(microbe_control_MicrobeCompileController).index.wrapResult[0];
+				var wrappingRequired = this1;
+				var result = this.wrapResult(this.index(),wrappingRequired);
+				this.setContextActionResultWhenFinished(result);
+				return result;
+			} else if(3 == uriParts.length && uriParts[0] == "mods" && uriParts[1] == "list" && uriParts[2].length > 0) {
+				var name = uriParts[2];
+				this.context.actionContext.action = "mods";
+				this.context.actionContext.args = [name];
+				this.context.actionContext.get_uriParts().splice(0,3);
+				var this11 = haxe_rtti_Meta.getFields(microbe_control_MicrobeCompileController).mods.wrapResult[0];
+				var wrappingRequired1 = this11;
+				var result1 = this.wrapResult(this.mods(name),wrappingRequired1);
+				this.setContextActionResultWhenFinished(result1);
+				return result1;
+			} else if(3 == uriParts.length && uriParts[0] == "mods" && uriParts[1] == "plus" && uriParts[2].length > 0) {
+				var name1 = uriParts[2];
+				this.context.actionContext.action = "plus";
+				this.context.actionContext.args = [name1];
+				this.context.actionContext.get_uriParts().splice(0,3);
+				var this12 = haxe_rtti_Meta.getFields(microbe_control_MicrobeCompileController).plus.wrapResult[0];
+				var wrappingRequired2 = this12;
+				var result2 = this.wrapResult(this.plus(name1),wrappingRequired2);
+				this.setContextActionResultWhenFinished(result2);
+				return result2;
+			} else if(2 == uriParts.length && uriParts[0] == "insert" && uriParts[1].length > 0) {
+				var mod = uriParts[1];
+				this.context.actionContext.action = "insert";
+				this.context.actionContext.args = [mod];
+				this.context.actionContext.get_uriParts().splice(0,2);
+				var this13 = haxe_rtti_Meta.getFields(microbe_control_MicrobeCompileController).insert.wrapResult[0];
+				var wrappingRequired3 = this13;
+				var result3 = this.wrapResult(this.insert(mod),wrappingRequired3);
+				this.setContextActionResultWhenFinished(result3);
+				return result3;
+			} else if(4 == uriParts.length && uriParts[0] == "affiche" && uriParts[1].length > 0 && uriParts[2] == "mod" && uriParts[3].length > 0) {
+				var mod1 = uriParts[1];
+				var id = Std.parseInt(uriParts[3]);
+				if(id == null) {
+					var reason = "Could not parse parameter " + "id" + ":Int = " + uriParts[3];
+					var message = "Bad Request";
+					if(reason != null) {
+						message += ": " + reason;
+					}
+					throw new js__$Boot_HaxeError(new tink_core_TypedError(400,message,{ fileName : "src/microbe/control/MicrobeCompileController.hx", lineNumber : 145, className : "microbe.control.MicrobeCompileController", methodName : "execute"}));
+				}
+				this.context.actionContext.action = "update";
+				this.context.actionContext.args = [mod1,id];
+				this.context.actionContext.get_uriParts().splice(0,4);
+				var this14 = haxe_rtti_Meta.getFields(microbe_control_MicrobeCompileController).update.wrapResult[0];
+				var wrappingRequired4 = this14;
+				var result4 = this.wrapResult(this.update(mod1,id),wrappingRequired4);
+				this.setContextActionResultWhenFinished(result4);
+				return result4;
+			} else if(2 == uriParts.length && uriParts[0] == "setup" && uriParts[1].length > 0) {
+				var mod2 = uriParts[1];
+				this.context.actionContext.action = "setup";
+				this.context.actionContext.args = [mod2];
+				this.context.actionContext.get_uriParts().splice(0,2);
+				var this15 = haxe_rtti_Meta.getFields(microbe_control_MicrobeCompileController).setup.wrapResult[0];
+				var wrappingRequired5 = this15;
+				var result5 = this.wrapResult(this.setup(mod2),wrappingRequired5);
+				this.setContextActionResultWhenFinished(result5);
+				return result5;
+			}
+			throw new js__$Boot_HaxeError(ufront_web_HttpError.pageNotFound({ fileName : "src/microbe/control/MicrobeCompileController.hx", lineNumber : 16, className : "microbe.control.MicrobeCompileController", methodName : "execute"}));
+		} catch( e ) {
+			haxe_CallStack.lastException = e;
+			return ufront_core_SurpriseTools.asSurpriseError((e instanceof js__$Boot_HaxeError) ? e.val : e,"Uncaught error while executing " + Std.string(this.context.actionContext.controller) + "." + this.context.actionContext.action + "()",{ fileName : "src/microbe/control/MicrobeCompileController.hx", lineNumber : 16, className : "microbe.control.MicrobeCompileController", methodName : "execute"});
+		}
+	}
+	,__class__: microbe_control_MicrobeCompileController
 });
 var microbe_control_MicrobeController = function() {
 	ufront_web_Controller.call(this);
 };
 $hxClasses["microbe.control.MicrobeController"] = microbe_control_MicrobeController;
 microbe_control_MicrobeController.__name__ = ["microbe","control","MicrobeController"];
-microbe_control_MicrobeController.wrapInLayout = function(title,template,data) {
-	return new ufront_web_result_ViewResult(data).setVar("title",title).usingTemplateString(template,"<!DOCTYPE html>\n<html>\n<head>\n\t<title>::title::</title>\n\n\t\n\t\n\t\t<!-- Font Awesome for awesome icons. You can redefine icons used in a plugin configuration -->\n\t<link href=\"http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css\" rel=\"stylesheet\">\n\t\n\t<!-- CSS -->\n\t<link rel=\"stylesheet\" href=\"http://linkesch.com/medium-editor-insert-plugin/bower_components/medium-editor/dist/css/medium-editor.min.css\">\n\t<link rel=\"stylesheet\" href=\"http://linkesch.com/medium-editor-insert-plugin/bower_components/medium-editor/dist/css/themes/default.css\">\n\t<link rel=\"stylesheet\" href=\"http://linkesch.com/medium-editor-insert-plugin/bower_components/medium-editor-insert-plugin/dist/css/medium-editor-insert-plugin.min.css\">\n\t\n\t<!-- JS -->\n\t<script uf-reload src=\"http://linkesch.com/medium-editor-insert-plugin/bower_components/jquery/dist/jquery.min.js\"></script>\n\t<script uf-reload src=\"http://linkesch.com/medium-editor-insert-plugin/bower_components/medium-editor/dist/js/medium-editor.js\"></script>\n\t<script uf-reload src=\"http://linkesch.com/medium-editor-insert-plugin/bower_components/handlebars/handlebars.runtime.min.js\"></script>\n\t<script uf-reload src=\"http://linkesch.com/medium-editor-insert-plugin/bower_components/jquery-sortable/source/js/jquery-sortable-min.js\"></script>\n\t<script uf-reload src=\"http://linkesch.com/medium-editor-insert-plugin/bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js\"></script>\n\t<script uf-reload src=\"http://linkesch.com/medium-editor-insert-plugin/bower_components/blueimp-file-upload/js/jquery.iframe-transport.js\"></script>\n\t<script uf-reload src=\"http://linkesch.com/medium-editor-insert-plugin/bower_components/blueimp-file-upload/js/jquery.fileupload.js\"></script>\n\t<script uf-reload src=\"http://linkesch.com/medium-editor-insert-plugin/bower_components/medium-editor-insert-plugin/dist/js/medium-editor-insert-plugin.min.js\"></script>\n\t\n\n\n\t<script type=\"text/javascript\" src=\"/js/client.js\"></script>\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/js/lessie/lessie.css\">\n</head>\n<body data-uf-layout=\"layout\">\n::viewContent::\n</body>\n</html>");
-};
 microbe_control_MicrobeController.reloadGlobalVars = function(api,mod) {
-	haxe_Log.trace("reloadGlobalVars",{ fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 190, className : "microbe.control.MicrobeController", methodName : "reloadGlobalVars"});
+	haxe_Log.trace("reloadGlobalVars",{ fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 178, className : "microbe.control.MicrobeController", methodName : "reloadGlobalVars"});
 	if(Reflect.field(ufront_web_result_ViewResult.globalValues,"items") == null) {
 		return tink_core__$Promise_Promise_$Impl_$.next(api.getAllModels(mod),function(items) {
 			ufront_view__$TemplateData_TemplateData_$Impl_$.set(ufront_web_result_ViewResult.globalValues,"items",items);
@@ -10257,7 +10618,7 @@ microbe_control_MicrobeController.reloadGlobalVars = function(api,mod) {
 		});
 	}
 	ufront_view__$TemplateData_TemplateData_$Impl_$.set(ufront_web_result_ViewResult.globalValues,"mod",mod);
-	return Reflect.field(ufront_web_result_ViewResult.globalValues,"items");
+	return new tink_core__$Future_SyncFuture(new tink_core__$Lazy_LazyConst(tink_core_Outcome.Success(Reflect.field(ufront_web_result_ViewResult.globalValues,"items"))));
 };
 microbe_control_MicrobeController.asPromise = function(surp) {
 	return surp;
@@ -10307,22 +10668,21 @@ microbe_control_MicrobeController.prototype = $extend(ufront_web_Controller.prot
 	}
 	,index: function() {
 		var msg = "indox" + Std.string(this.models);
-		var pos = { fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 67, className : "microbe.control.MicrobeController", methodName : "index"};
+		var pos = { fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 55, className : "microbe.control.MicrobeController", methodName : "index"};
 		if(this.context != null) {
 			this.context.messages.push({ msg : msg, pos : pos, type : ufront_log_MessageType.MTrace});
 		} else {
 			haxe_Log.trace("" + Std.string(msg),pos);
 		}
 		ufront_view__$TemplateData_TemplateData_$Impl_$.set(ufront_web_result_ViewResult.globalValues,"items",[]);
-		var template = "<header><h1>Microbe Admin</h1>\n<a href=\"/::micPath::\" rel=\"pushstate\">⦿</a>\n</header>\n<div class=\"mic-walker\">\n\t<div class=\"mic-walk\" data-uf-partial=\"volist\">$$voList()</div>\n\t<div class=\"mic-walk\" data-uf-partial=\"items\">$$items()</div>\n\t<div class=\"mic-walk\" data-uf-partial=\"form\">$$form()</div>\n</div>";
 		var obj = { };
 		var this1 = obj != null ? obj : { };
-		return microbe_control_MicrobeController.wrapInLayout("mic",template,ufront_view__$TemplateData_TemplateData_$Impl_$.setObject(this1,{ })).addPartialString("microbeFarm","hellomicrobe",ufront_view_TemplatingEngines.get_haxe());
+		return new ufront_web_result_ViewResult(ufront_view__$TemplateData_TemplateData_$Impl_$.setObject(this1,{ }),"index");
 	}
 	,mods: function(name) {
 		var _gthis = this;
 		var f = function(n) {
-			var pos = { fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 91, className : "microbe.control.MicrobeController", methodName : "mods"};
+			var pos = { fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 79, className : "microbe.control.MicrobeController", methodName : "mods"};
 			if(_gthis.context != null) {
 				_gthis.context.messages.push({ msg : "mods", pos : pos, type : ufront_log_MessageType.MLog});
 			} else {
@@ -10334,7 +10694,7 @@ microbe_control_MicrobeController.prototype = $extend(ufront_web_Controller.prot
 		};
 		var ret = tink_core__$Promise_Promise_$Impl_$.next(this.microbeApi.getAllModels(name),function(items) {
 			var msg = "back" + Std.string(items) + name;
-			var pos1 = { fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 83, className : "microbe.control.MicrobeController", methodName : "mods"};
+			var pos1 = { fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 71, className : "microbe.control.MicrobeController", methodName : "mods"};
 			if(_gthis.context != null) {
 				_gthis.context.messages.push({ msg : msg, pos : pos1, type : ufront_log_MessageType.MLog});
 			} else {
@@ -10366,7 +10726,7 @@ microbe_control_MicrobeController.prototype = $extend(ufront_web_Controller.prot
 			return new tink_core__$Future_SyncFuture(new tink_core__$Lazy_LazyConst(new ufront_web_result_ContentResult(Std.string("erreur" + Std.string(n)))));
 		};
 		var ret = tink_core__$Promise_Promise_$Impl_$.next(this.microbeApi.getFormuleFromString(mod),function(formule) {
-			var pos = { fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 122, className : "microbe.control.MicrobeController", methodName : "insert"};
+			var pos = { fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 110, className : "microbe.control.MicrobeController", methodName : "insert"};
 			if(_gthis.context != null) {
 				_gthis.context.messages.push({ msg : formule, pos : pos, type : ufront_log_MessageType.MTrace});
 			} else {
@@ -10468,7 +10828,7 @@ microbe_control_MicrobeController.prototype = $extend(ufront_web_Controller.prot
 					if(reason != null) {
 						message += ": " + reason;
 					}
-					throw new js__$Boot_HaxeError(new tink_core_TypedError(400,message,{ fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 155, className : "microbe.control.MicrobeController", methodName : "execute"}));
+					throw new js__$Boot_HaxeError(new tink_core_TypedError(400,message,{ fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 143, className : "microbe.control.MicrobeController", methodName : "execute"}));
 				}
 				this.context.actionContext.action = "update";
 				this.context.actionContext.args = [mod1,id];
@@ -10489,10 +10849,10 @@ microbe_control_MicrobeController.prototype = $extend(ufront_web_Controller.prot
 				this.setContextActionResultWhenFinished(result5);
 				return result5;
 			}
-			throw new js__$Boot_HaxeError(ufront_web_HttpError.pageNotFound({ fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 17, className : "microbe.control.MicrobeController", methodName : "execute"}));
+			throw new js__$Boot_HaxeError(ufront_web_HttpError.pageNotFound({ fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 12, className : "microbe.control.MicrobeController", methodName : "execute"}));
 		} catch( e ) {
 			haxe_CallStack.lastException = e;
-			return ufront_core_SurpriseTools.asSurpriseError((e instanceof js__$Boot_HaxeError) ? e.val : e,"Uncaught error while executing " + Std.string(this.context.actionContext.controller) + "." + this.context.actionContext.action + "()",{ fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 17, className : "microbe.control.MicrobeController", methodName : "execute"});
+			return ufront_core_SurpriseTools.asSurpriseError((e instanceof js__$Boot_HaxeError) ? e.val : e,"Uncaught error while executing " + Std.string(this.context.actionContext.controller) + "." + this.context.actionContext.action + "()",{ fileName : "src/microbe/control/MicrobeController.hx", lineNumber : 12, className : "microbe.control.MicrobeController", methodName : "execute"});
 		}
 	}
 	,__class__: microbe_control_MicrobeController
@@ -11377,7 +11737,7 @@ microbe_result_MicrobeAction.prototype = $extend(ufront_web_client_UFClientActio
 	execute: function(httpContext,comp) {
 		haxe_Timer.delay(function() {
 			comp.execute(httpContext);
-			haxe_Log.trace("microAct",{ fileName : "src/microbe/result/MicrobeResult.hx", lineNumber : 133, className : "microbe.result.MicrobeAction", methodName : "execute"});
+			haxe_Log.trace("microAct",{ fileName : "src/microbe/result/MicrobeResult.hx", lineNumber : 132, className : "microbe.result.MicrobeAction", methodName : "execute"});
 		},500);
 	}
 	,__class__: microbe_result_MicrobeAction
@@ -11389,7 +11749,7 @@ microbe_result_MicrobeListAction.__super__ = ufront_web_client_UFClientAction;
 microbe_result_MicrobeListAction.prototype = $extend(ufront_web_client_UFClientAction.prototype,{
 	execute: function(httpContext,comp) {
 		var pos_fileName = "src/microbe/result/MicrobeResult.hx";
-		var pos_lineNumber = 151;
+		var pos_lineNumber = 150;
 		var pos_className = "microbe.result.MicrobeListAction";
 		var pos_methodName = "execute";
 		window.console.log("" + pos_className + "." + pos_methodName + "()[" + pos_lineNumber + "]:","hey microbe list action");
@@ -18497,7 +18857,8 @@ ufront_remoting_RemotingUtil.processResponse = function(response,onResult,errorH
 					ret = s.unserialize();
 				} catch( e ) {
 					haxe_CallStack.lastException = e;
-					ret = errors.push(ufront_remoting_RemotingError.RServerSideException(remotingCallString,(e instanceof js__$Boot_HaxeError) ? e.val : e,stack));
+					errors.push(ufront_remoting_RemotingError.RServerSideException(remotingCallString,(e instanceof js__$Boot_HaxeError) ? e.val : e,stack));
+					return;
 				}
 				break;
 			case "hxr":
@@ -18506,7 +18867,8 @@ ufront_remoting_RemotingUtil.processResponse = function(response,onResult,errorH
 					ret = s1.unserialize();
 				} catch( e1 ) {
 					haxe_CallStack.lastException = e1;
-					ret = errors.push(ufront_remoting_RemotingError.RUnserializeFailed(remotingCallString,HxOverrides.substr(line,3,null),"" + Std.string((e1 instanceof js__$Boot_HaxeError) ? e1.val : e1)));
+					errors.push(ufront_remoting_RemotingError.RUnserializeFailed(remotingCallString,HxOverrides.substr(line,3,null),"" + Std.string((e1 instanceof js__$Boot_HaxeError) ? e1.val : e1)));
+					return;
 				}
 				hxrFound = true;
 				break;
@@ -18516,7 +18878,8 @@ ufront_remoting_RemotingUtil.processResponse = function(response,onResult,errorH
 					stack = s2.unserialize();
 				} catch( e2 ) {
 					haxe_CallStack.lastException = e2;
-					stack = errors.push(ufront_remoting_RemotingError.RUnserializeFailed(remotingCallString,HxOverrides.substr(line,3,null),"" + Std.string((e2 instanceof js__$Boot_HaxeError) ? e2.val : e2)));
+					errors.push(ufront_remoting_RemotingError.RUnserializeFailed(remotingCallString,HxOverrides.substr(line,3,null),"" + Std.string((e2 instanceof js__$Boot_HaxeError) ? e2.val : e2)));
+					return;
 				}
 				break;
 			case "hxt":
@@ -18526,7 +18889,8 @@ ufront_remoting_RemotingUtil.processResponse = function(response,onResult,errorH
 					m = s3.unserialize();
 				} catch( e3 ) {
 					haxe_CallStack.lastException = e3;
-					m = errors.push(ufront_remoting_RemotingError.RUnserializeFailed(remotingCallString,HxOverrides.substr(line,3,null),"" + Std.string((e3 instanceof js__$Boot_HaxeError) ? e3.val : e3)));
+					errors.push(ufront_remoting_RemotingError.RUnserializeFailed(remotingCallString,HxOverrides.substr(line,3,null),"" + Std.string((e3 instanceof js__$Boot_HaxeError) ? e3.val : e3)));
+					return;
 				}
 				var extras = m.pos != null && m.pos.customParams != null ? " " + m.pos.customParams.join(" ") : "";
 				var msg = "[R]" + m.pos.className + "." + m.pos.methodName + "(" + m.pos.lineNumber + "): " + Std.string(m.msg) + extras;
@@ -18582,49 +18946,49 @@ ufront_remoting_RemotingUtil.defaultErrorHandler = function(error) {
 		var responseData = error[4];
 		var responseCode = error[3];
 		var remotingCallString = error[2];
-		haxe_Log.trace("Error during remoting call " + remotingCallString + ": The HTTP Request returned status [" + responseCode + "].",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 125, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
-		haxe_Log.trace("Returned data: " + responseData,{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 126, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
+		haxe_Log.trace("Error during remoting call " + remotingCallString + ": The HTTP Request returned status [" + responseCode + "].",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 140, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
+		haxe_Log.trace("Returned data: " + responseData,{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 141, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
 		break;
 	case 1:
 		var err = error[3];
 		var remotingCallString1 = error[2];
-		haxe_Log.trace("Error during remoting call " + remotingCallString1 + ": API or Method is not found or not available in the remoting context.",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 128, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
-		haxe_Log.trace("Error message: " + err,{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 129, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
+		haxe_Log.trace("Error during remoting call " + remotingCallString1 + ": API or Method is not found or not available in the remoting context.",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 143, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
+		haxe_Log.trace("Error message: " + err,{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 144, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
 		break;
 	case 2:
 		var stack = error[4];
 		var e = error[3];
 		var remotingCallString2 = error[2];
-		haxe_Log.trace("Error during remoting call " + remotingCallString2 + ": The server threw an error \"" + Std.string(e) + "\".",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 131, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
-		haxe_Log.trace(stack,{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 132, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
+		haxe_Log.trace("Error during remoting call " + remotingCallString2 + ": The server threw an error \"" + Std.string(e) + "\".",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 146, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
+		haxe_Log.trace(stack,{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 147, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
 		break;
 	case 3:
 		var e1 = error[3];
 		var remotingCallString3 = error[2];
-		haxe_Log.trace("Error during remoting call " + remotingCallString3 + ": The client throw an error \"" + Std.string(e1) + "\" during the remoting callback.",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 134, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
-		haxe_Log.trace("Compiling with \"-debug\" will prevent this error being caught, so you can use your browser's debugger to collect more information.",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 135, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
+		haxe_Log.trace("Error during remoting call " + remotingCallString3 + ": The client throw an error \"" + Std.string(e1) + "\" during the remoting callback.",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 149, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
+		haxe_Log.trace("Compiling with \"-debug\" will prevent this error being caught, so you can use your browser's debugger to collect more information.",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 150, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
 		break;
 	case 4:
 		var err1 = error[4];
 		var troubleLine = error[3];
 		var remotingCallString4 = error[2];
-		haxe_Log.trace("Error during remoting call " + remotingCallString4 + ": Failed to unserialize this line in the response: \"" + err1 + "\"",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 137, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
-		haxe_Log.trace("The line that failed: \"" + err1 + "\"",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 138, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
+		haxe_Log.trace("Error during remoting call " + remotingCallString4 + ": Failed to unserialize this line in the response: \"" + err1 + "\"",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 152, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
+		haxe_Log.trace("The line that failed: \"" + err1 + "\"",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 153, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
 		break;
 	case 5:
 		var responseData1 = error[3];
 		var remotingCallString5 = error[2];
-		haxe_Log.trace("Error during remoting call " + remotingCallString5 + ": No remoting result in data.",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 140, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
-		haxe_Log.trace("Returned data: " + responseData1,{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 141, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
+		haxe_Log.trace("Error during remoting call " + remotingCallString5 + ": No remoting result in data.",{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 155, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
+		haxe_Log.trace("Returned data: " + responseData1,{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 156, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
 		break;
 	case 6:
 		var data = error[3];
 		var remotingCallString6 = error[2];
-		haxe_Log.trace("The remoting call " + remotingCallString6 + " functioned correctly, but the API returned a failure: " + data,{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 143, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
+		haxe_Log.trace("The remoting call " + remotingCallString6 + " functioned correctly, but the API returned a failure: " + data,{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 158, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
 		break;
 	case 7:
 		var e2 = error[2];
-		haxe_Log.trace("Unknown error encountered during remoting call: " + Std.string(e2),{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 145, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
+		haxe_Log.trace("Unknown error encountered during remoting call: " + Std.string(e2),{ fileName : "ufront/remoting/RemotingUtil.hx", lineNumber : 160, className : "ufront.remoting.RemotingUtil", methodName : "defaultErrorHandler"});
 		break;
 	}
 };
@@ -21550,7 +21914,7 @@ if(ArrayBuffer.prototype.slice == null) {
 var DataView = $global.DataView || js_html_compat_DataView;
 var Uint8Array = $global.Uint8Array || js_html_compat_Uint8Array._new;
 msignal_SlotList.NIL = new msignal_SlotList(null,null);
-CompileTimeClassList.__meta__ = { obj : { classLists : [["null,true,ufront.web.Controller","microbe.control.HomeController,microbe.control.MicrobeController,ufront.app.DefaultUfrontController"],["null,true,ufront.api.UFApi","microbe.apis.MicrobialApi,ufront.auth.api.EasyAuthApi"],["null,true,ufront.web.client.UFClientAction","microbe.result.MicrobeAction,microbe.result.MicrobeListAction"],["null,true,ufront.web.Controller","microbe.control.HomeController,microbe.control.MicrobeController,ufront.app.DefaultUfrontController"],["null,true,ufront.api.UFApi","microbe.apis.MicrobialApi,ufront.auth.api.EasyAuthApi"],["null,true,ufront.web.Controller","microbe.control.HomeController,microbe.control.MicrobeController,ufront.app.DefaultUfrontController"],["null,true,ufront.api.UFApi","microbe.apis.MicrobialApi,ufront.auth.api.EasyAuthApi"],["null,true,ufront.web.client.UFClientAction","microbe.result.MicrobeAction,microbe.result.MicrobeListAction"],["null,true,ufront.web.Controller","microbe.control.HomeController,microbe.control.MicrobeController,ufront.app.DefaultUfrontController"],["null,true,ufront.api.UFApi","microbe.apis.MicrobialApi,ufront.auth.api.EasyAuthApi"]]}};
+CompileTimeClassList.__meta__ = { obj : { classLists : [["null,true,ufront.web.Controller","microbe.control.HomeController,microbe.control.MicrobeController,ufront.app.DefaultUfrontController"],["null,true,ufront.api.UFApi","microbe.apis.MicrobialApi,ufront.auth.api.EasyAuthApi"],["null,true,ufront.web.client.UFClientAction","microbe.result.MicrobeAction,microbe.result.MicrobeListAction"],["null,true,ufront.web.Controller","microbe.control.HomeController,microbe.control.MicrobeController,ufront.app.DefaultUfrontController"],["null,true,ufront.api.UFApi","microbe.apis.MicrobialApi,ufront.auth.api.EasyAuthApi"],["null,true,ufront.web.Controller","microbe.control.HomeController,microbe.control.MicrobeCompileController,microbe.control.MicrobeController,ufront.app.DefaultUfrontController"],["null,true,ufront.api.UFApi","microbe.apis.MicrobialApi,ufront.auth.api.EasyAuthApi"],["null,true,ufront.web.client.UFClientAction","microbe.result.MicrobeAction,microbe.result.MicrobeListAction"],["null,true,ufront.web.Controller","microbe.control.HomeController,microbe.control.MicrobeCompileController,microbe.control.MicrobeController,ufront.app.DefaultUfrontController"],["null,true,ufront.api.UFApi","microbe.apis.MicrobialApi,ufront.auth.api.EasyAuthApi"]]}};
 erazor_Parser.at = "@";
 erazor_Parser.bracketMismatch = "Bracket mismatch! Inside template, non-paired brackets, '{' or '}', should be replaced by @{'{'} and @{'}'}.";
 haxe_IMap.__meta__ = { obj : { 'interface' : null}};
@@ -21574,6 +21938,7 @@ haxe_io_FPHelper.i64tmp = (function($this) {
 haxe_io_FPHelper.helper = new DataView(new ArrayBuffer(8));
 haxe_remoting_AsyncConnection.__meta__ = { obj : { 'interface' : null}};
 haxe_remoting_Connection.__meta__ = { obj : { 'interface' : null}};
+haxe_remoting_HttpConnection.TIMEOUT = 10.;
 hscript_Parser.p1 = 0;
 hscript_Parser.readPos = 0;
 hscript_Parser.tokenMin = 0;
@@ -21601,6 +21966,7 @@ microbe_apis_MicrobialApiAsync.__meta__ = { obj : { rtti : [["injectApi","","min
 microbe_comps_molecules_OrderedListWrapper.signal = new microbe_signal_OrderSignal();
 ufront_web_Controller.__meta__ = { obj : { rtti : [["injectContext","","ufront.web.context.HttpContext","",""]]}};
 microbe_control_HomeController.__meta__ = { fields : { index : { wrapResult : [3]}, execute_mic : { wrapResult : [0]}}};
+microbe_control_MicrobeCompileController.__meta__ = { obj : { rtti : [["microbeApi","microbe.apis.MicrobialApiAsync",""],["models","Array<Dynamic>","models"],["micPath","String","micPath"],["init","1"]]}, fields : { index : { wrapResult : [3]}, mods : { wrapResult : [6]}, plus : { wrapResult : [6]}, insert : { wrapResult : [6]}, update : { wrapResult : [6]}, setup : { wrapResult : [6]}}};
 microbe_control_MicrobeController.__meta__ = { obj : { rtti : [["microbeApi","microbe.apis.MicrobialApiAsync",""],["models","Array<Dynamic>","models"],["micPath","String","micPath"],["init","1"]], viewFolder : ["microbe"]}, fields : { index : { wrapResult : [3]}, mods : { wrapResult : [6]}, plus : { wrapResult : [6]}, insert : { wrapResult : [6]}, update : { wrapResult : [6]}, setup : { wrapResult : [6]}}};
 microbe_model_Article.__meta__ = { obj : { ufRelationships : null, hxSerializationFields : ["titre","src","content","id","created","modified"]}, fields : { titre : { microbe : ["titre","TextInput"]}, src : { microbe : ["illustration","UpApiComp"]}, content : { microbe : ["content","MediumEditor"]}}};
 microbe_model_Article.formule = (function($this) {

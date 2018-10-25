@@ -935,3 +935,53 @@
 2018-05-29 08:09:38 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
 	[Trace] microbe.control.HomeController.index(14): yu
 2018-05-29 08:09:39 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+2018-06-14 20:19:20 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yuzu
+2018-06-14 20:19:20 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] microbe.control.MicrobeController.index(67): indox[{ name : microbe.model.Article },{ name : microbe.vo.FakeVo }]
+2018-06-14 23:18:56 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yuzu
+2018-06-14 23:18:56 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] microbe.control.MicrobeController.index(63): indox[{ name : microbe.model.Article },{ name : microbe.vo.FakeVo }]
+2018-06-15 07:23:28 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yuzu
+2018-06-15 07:23:29 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] microbe.control.MicrobeController.index(62): indox[{ name : microbe.model.Article },{ name : microbe.vo.FakeVo }]
+2018-06-15 07:23:33 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-06-15 07:23:35 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-06-15 07:24:27 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(14): yuzu
+2018-06-15 07:24:27 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] microbe.control.MicrobeController.index(55): indox[{ name : microbe.model.Article },{ name : microbe.vo.FakeVo }]
+2018-06-15 07:24:29 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-06-15 07:26:07 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(12): yuzu
+2018-06-15 07:26:08 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] microbe.control.MicrobeCompileController.index(59): indox[{ name : microbe.model.Article },{ name : microbe.vo.FakeVo }]
+2018-06-15 07:26:10 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getAllModels(72): all muds
+2018-06-15 07:26:12 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-06-15 07:26:13 [POST] [/] from [127.0.0.1 The Boss], response: [200 application/x-haxe-remoting]
+	[Log] microbe.apis.MicrobialApi.getDataFormule(196): getDataFormule
+2018-07-04 14:30:02 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(12): yuzu
+2018-07-04 14:30:02 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] microbe.control.MicrobeCompileController.index(59): indox[{ name : microbe.model.Article },{ name : microbe.vo.FakeVo }]
+2018-07-04 14:30:03 [GET] [/favicon.ico] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:7 \nCalled from /Users/ut/Documents/LAB/UMicrobe/www/lib/microbe/control/HomeController.php line 93
+2018-07-04 15:28:13 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] microbe.control.MicrobeCompileController.index(59): indox[{ name : microbe.model.Article },{ name : microbe.vo.FakeVo }]
+2018-07-05 13:37:57 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(12): yuzu
+2018-07-05 18:49:33 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(12): yuzu
+2018-07-05 18:49:33 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] microbe.control.MicrobeCompileController.index(59): indox[{ name : microbe.model.Article },{ name : microbe.vo.FakeVo }]
+2018-07-05 18:49:35 [GET] [/favicon.ico] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:7 \nCalled from /Users/ut/Documents/LAB/UMicrobe/www/lib/microbe/control/HomeController.php line 93
+2018-07-05 18:49:35 [GET] [/favicon.ico] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:7 \nCalled from /Users/ut/Documents/LAB/UMicrobe/www/lib/microbe/control/HomeController.php line 93

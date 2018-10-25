@@ -2,8 +2,6 @@ package microbe.control;
 import ufront.MVC;
 
 
-import tink.CoreApi;
-using microbe.control.MicrobeController;
 
 
 class HomeController extends Controller {
@@ -18,6 +16,6 @@ public function index()
     return new RedirectResult("/microbe");
 }
 @:route('/microbe/*')
-public var mic:MicrobeController;
+public var mic:MicrobeCompileController;
  
 }

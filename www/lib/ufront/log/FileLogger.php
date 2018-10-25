@@ -6,6 +6,7 @@
 
 namespace ufront\log;
 
+use \haxe\io\Path;
 use \ufront\core\SurpriseTools;
 use \ufront\web\context\HttpContext;
 use \php\Boot;
@@ -15,6 +16,7 @@ use \tink\core\_Future\FutureObject;
 use \php\_Boot\HxString;
 use \ufront\app\UFLogHandler;
 use \ufront\app\UFInitRequired;
+use \sys\io\File;
 use \haxe\CallStack;
 
 /**
@@ -173,6 +175,20 @@ class FileLogger implements UFInitRequired, UFLogHandler {
 				$content = ($content??'null') . (("\x09" . (FileLogger::format($msg1)??'null') . "\x0A")??'null');
 			}
 		}
+		#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/log/FileLogger.hx:86: characters 4-53
+		$path = Path::directory($logFile);
+		#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/log/FileLogger.hx:86: characters 4-53
+		if (!is_dir($path)) {
+			#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/log/FileLogger.hx:86: characters 4-53
+			mkdir($path, 493, true);
+		}
+
+		#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/log/FileLogger.hx:87: characters 4-62
+		$file = File::append(($context->get_contentDirectory()??'null') . ($this->path??'null'));
+		#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/log/FileLogger.hx:88: characters 4-31
+		$file->writeString($content);
+		#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/log/FileLogger.hx:89: characters 4-16
+		$file->close();
 		#/Users/ut/Documents/LAB/ufront-mvc/src/ufront/log/FileLogger.hx:91: characters 4-34
 		return SurpriseTools::success();
 	}

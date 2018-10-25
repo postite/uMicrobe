@@ -1,45 +1,49 @@
-
 {
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "buildmicrobe",
+            "label": "yolo",
             "command": "open",
             "args": [
                 "-a",
                 "firefox",
                 "http://microbe.local"
             ],
+           
+            "dependsOn": [
+                "build server",
+                "build client"
+               
+            ],
+            "problemMatcher": [
+                "$haxe"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "dependsOn": [
-                "build client",
-                "build server"
-            ],
-            "problemMatcher": [
-                "$haxe"
-            ]
+            
         },
         {
             "label": "build client",
-            "command": "haxe",
-            "args": [
-                "client.hxml"
-            ],
+            "type": "hxml",
+            "file": "client.hxml",
             "problemMatcher": [
                 "$haxe"
             ]
+              
         },
         {
-            "label": "build server",
-            "command": "haxe",
-            "args": [
-                "server.hxml"
-            ],
+            "label":"build server",
+            "type": "hxml",
+            "file": "server.hxml",
             "problemMatcher": [
-                "$haxe"
+                "$haxe-absolute",
+                "$haxe",
+                "$haxe-error",
+                "$haxe-trace"
             ]
         }
     ]
