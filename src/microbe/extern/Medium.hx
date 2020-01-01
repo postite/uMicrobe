@@ -75,9 +75,10 @@ typedef Paste= {
 extern class Medium {
 
 
-	public inline function new(?element:String,?elements:Array<String>,options:MediumOptions){
-		return untyped __js__("new MediumEditor()")(element,options);
-	}
+	public inline function new(?element:String,?elements:Array<String>,options:MediumOptions);
+    // {
+	// 	return untyped __js__("new MediumEditor()")(element,options);
+	// }
 
     public static  var version:Dynamic;
     public function destroy():Void;
