@@ -36,6 +36,7 @@ class FormGenerator<T> {
 
 	public static function instanciateComp<T>(comp:String,data:Dynamic,name:String):Microbe<Dynamic>{
 		var fullClassPath="microbe.comps.atoms."+comp;
+		trace( fullClassPath);
 		if(comp.indexOf(".")!=-1)
 		fullClassPath=comp;
 		var mic:Microbe<T>=null;

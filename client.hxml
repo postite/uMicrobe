@@ -30,7 +30,7 @@
  -D lessieOutput=lessie/lessie.css
 -D eval-stack
 #-lib ufront-mvc
--lib ufront-client
+-lib ufront-client 
 #-lib minject
 #-D source-map
 #-D source-map-content

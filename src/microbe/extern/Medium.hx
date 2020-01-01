@@ -80,10 +80,10 @@ extern class Medium {
 	}
 
     public static  var version:Dynamic;
-    public function destroy():Void{};
+    public function destroy():Void;
 
     //*not tested above
-    public function getContent(?index:Int=0):String{};
-    public function serialize():String{};
+    public function getContent(?index:Int=0):String;
+    public function serialize():String;
     //static public function getEditorFromElement(element:js.html.Element):Medium{};
 }

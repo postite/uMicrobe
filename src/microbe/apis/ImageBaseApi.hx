@@ -13,20 +13,36 @@ using haxe.io.Path;
 using ufront.core.AsyncTools;
 //import ufront.web.upload.BrowserFileUpload;
 //
-typedef Resizr={
-	n:String,
-	w:Int,
-	h:Int,
-	?crop: Bool, // Defaults to true
-	?focus: {x: Float, y: Float} // Defaults to {x: .5, y: .5}
+// typedef Resizr={
+// 	n:String,
+// 	w:Int,
+// 	h:Int,
+// 	?crop: Bool, // Defaults to true
+// 	?focus: {x: Float, y: Float} // Defaults to {x: .5, y: .5}
+// }
+@:publicFields
+@:structInit
+class Resizr{
+	var n:String="nada";
+	var w:Int=2;
+	var h:Int=3;
+	var crop: Bool=true; // Defaults to true
+	var focus: {x: Float, y: Float}= {x: .5, y: .5};
+  public function new(n:String,w:Int,h:Int,?crop:Bool,?focus:{x:Float,y:Float}){
+    this.n=n;
+    this.w=w;
+    this.h=h;
+    this.crop=crop;
+    this.focus=focus;
+    
+  }
 }
 @:forward
-abstract Taille(Resizr) from Resizr to Resizr{
+abstract Taille(Resizr) from Resizr to Resizr {
     public static var Square:Taille={n:"Square",w:193,h:193};
     public static var Long:Taille={n:"Long",w:600,h:300,crop:false};
     public static var Screen:Taille={n:"Screen",w:800,h:600,crop:false};
     public static var Normal:Taille={n:"Normal",w:0,h:0,crop:false};
-    
 
     inline function new(i:Resizr) {
     this = i;
@@ -36,6 +52,7 @@ abstract Taille(Resizr) from Resizr to Resizr{
     public static function toStr(t:Taille):String{
        return '${t.w}*${t.h}_';
     }
+	
     @:to
     public static function toName(t:Taille):String{
        return t.n+"_";

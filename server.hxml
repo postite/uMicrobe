@@ -26,7 +26,7 @@
 #-cp ufront-mvc/src
 -lib tink_macro
 -lib ufront-orm
--lib image:0.1.0
+-lib image
 -D server
 -cp src
 

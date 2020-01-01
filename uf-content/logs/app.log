@@ -985,3 +985,9 @@
 	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:7 \nCalled from /Users/ut/Documents/LAB/UMicrobe/www/lib/microbe/control/HomeController.php line 93
 2018-07-05 18:49:35 [GET] [/favicon.ico] from [127.0.0.1 The Boss], response: [404 text/html]
 	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:7 \nCalled from /Users/ut/Documents/LAB/UMicrobe/www/lib/microbe/control/HomeController.php line 93
+2018-12-31 11:39:01 [GET] [/] from [127.0.0.1 The Boss], response: [302 null]
+	[Trace] microbe.control.HomeController.index(12): yuzu
+2018-12-31 11:39:01 [GET] [/microbe] from [127.0.0.1 The Boss], response: [200 text/html]
+	[Trace] microbe.control.MicrobeCompileController.index(59): indox[{ name : microbe.model.Article },{ name : microbe.vo.FakeVo }]
+2018-12-31 11:39:02 [GET] [/favicon.ico] from [127.0.0.1 The Boss], response: [404 text/html]
+	[Error] ufront.web.ErrorPageHandler.handleError(44): Handling error: Error#404: Page Not Found @ microbe.control.HomeController.execute:7 \nCalled from /Users/ut/Documents/LAB/UMicrobe/www/lib/microbe/control/HomeController.php line 93

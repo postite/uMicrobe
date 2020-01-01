@@ -1,0 +1,25 @@
+{
+    // "haxe.displayServer": {
+    //     "arguments": ["-v"]
+    // },
+    "haxe.enableCompilationServer": true,
+    "haxe.displayConfigurations": [ // one or more configurations for the haxe completion server
+       // [ "-js","-neko"], // a configuration is array of arguments passed to the completion server
+        ["server.hxml"], // hxml file is an normal haxe argument too
+        ["client.hxml"]
+    ],
+    
+    // "haxe.executable": {
+    //     "path": "/Users/ut/Downloads/haxeP4/haxe", // path to the executable (default: `haxe`)
+    //     "env": { // environment variables for Haxe
+    //         "HAXE_STD_PATH": "/Users/ut/Downloads/haxeP4/std",
+    //        // "SOME_VAR": "some_value",
+    //     },
+    //     // platform-specific overrides of the keys above
+    //     // they will be merged into the default configuration
+    //     "windows": {},
+    //     "linux": {},
+    //     "osx": {}
+    // }
+     //"haxe.executable": "/Users/ut/Downloads/haxeP4/haxe",
+}
