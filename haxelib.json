@@ -4,13 +4,10 @@
     "license": "MIT",
     "tags": ["ufront", "orm"],
     "description": "one desc",
-    "version": "0.8.0",
+    "version": "0.9.0",
     "classPath": "src",
     "releasenote": "still trying",
     "contributors": ["postite"],
     "dependencies": {
-      "record-macros": "",
-      "compiletime": ""
-      
     }
   }
